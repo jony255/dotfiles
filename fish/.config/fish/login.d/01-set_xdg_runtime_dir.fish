@@ -1,5 +1,3 @@
-#!/usr/bin/env fish
-
 if [ -z "$XDG_RUNTIME_DIR" ]
     set -gx XDG_RUNTIME_DIR /tmp/$USER-runtime-dir
     
