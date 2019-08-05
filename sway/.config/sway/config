@@ -1,0 +1,63 @@
+set { 
+	# use the super key as mod
+	$mod Mod4
+
+	# variables for commonly used programs
+	$term termite
+	$browser firefox
+    $tray_script $HOME/.config/fish/scripts/sway_tray/sway_tray.fish
+}
+
+# bindings for commonly used programs
+bindsym {
+	$mod+Return exec $term
+	$mod+b exec $browser
+}
+
+# move focus via vim keybindings
+bindsym {
+	$mod+h focus left
+	$mod+j focus down
+	$mod+k focus up 
+	$mod+l focus right
+}
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# exit wayland session
+bindsym $mod+Shift+e exec swaymsg exit
+
+# don't need usage of all 9 workspaces
+bindsym {
+	$mod+1 workspace 1
+	$mod+2 workspace 2
+	$mod+3 workspace 3
+	$mod+4 workspace 4
+}
+
+input "2:18:FocalTechPS/2_FocalTech_Touchpad" {
+	tap enabled
+	natural_scroll enable
+	dwt enabled
+}
+
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+	repeat_delay 275
+}
+
+bar {
+    position top
+
+    status_command $tray_script 
+    
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
+# TODO: change background
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
