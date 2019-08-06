@@ -7,8 +7,8 @@ PREFIX=$HOME/.local
 
 # fetch
 # -L allows us to be redirected to the aws instance the link points to
-# -O makes the downloaded file's name = ${pkgname}-${version}
-curl -LO ${distfiles}/${version}/${pkgname}-${version}.tar.gz -o ${pkgname}-${version}.tar.gz
+# -o makes the downloaded file's name = ${pkgname}-${version}
+curl -L ${distfiles}/${version}/${pkgname}-${version}.tar.gz -o ${pkgname}-${version}.tar.gz
 
 # extract
 tar -xzf ${pkgname}-${version}.tar.gz
