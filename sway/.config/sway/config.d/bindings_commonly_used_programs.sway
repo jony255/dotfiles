@@ -1,0 +1,5 @@
+# bindings for commonly used programs
+bindsym {
+	$mod+Return exec $term
+	$mod+b exec $browser
+}

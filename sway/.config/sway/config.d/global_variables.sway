@@ -1,0 +1,14 @@
+set { 
+	# use the super key as mod
+	$mod Mod4
+
+	# variables for commonly used programs
+	$term termite
+	$browser firefox
+    $tray_script $HOME/.config/fish/scripts/sway_tray/sway_tray.fish
+
+    $left  h  
+    $down  j
+    $up    k
+    $right l
+}
