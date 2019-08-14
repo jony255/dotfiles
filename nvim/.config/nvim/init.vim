@@ -24,6 +24,10 @@ set clipboard=unnamedplus
 set splitright " when splitting vertically, split right
 set splitbelow " when splitting horizontally, split below
 
+" have curly brackets auto pair
+" ok to use tabs since tabs are expanded
+inoremap { {}<LEFT><CR><CR><UP><TAB> 
+
 " move around splits 
 nnoremap <Space>h <C-W>h
 nnoremap <Space>l <C-W>l
@@ -38,3 +42,5 @@ vnoremap <silent> <Tab>   >gv
 vnoremap <silent> <S-Tab> <gv
 nnoremap <Tab>   >>
 nnoremap <S-Tab> <<
+
+colo jony
