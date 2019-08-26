@@ -2,13 +2,13 @@
 
 pkgname=fish
 version=3.0.2
-distfiles="https://github.com/fish-shell/fish-shell/releases/download"
+distfiles="https://github.com/fish-shell/fish-shell/releases/download/${version}/${pkgname}-${version}.tar.gz"
 PREFIX=$HOME/.local
 
 # fetch
 # -L allows us to be redirected to the aws instance the link points to
 # -o makes the downloaded file's name = ${pkgname}-${version}
-curl -L ${distfiles}/${version}/${pkgname}-${version}.tar.gz -o ${pkgname}-${version}.tar.gz
+curl -L ${distfiles} -o ${pkgname}-${version}.tar.gz
 
 # extract
 tar -xzf ${pkgname}-${version}.tar.gz

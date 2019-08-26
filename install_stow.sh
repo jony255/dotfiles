@@ -2,13 +2,13 @@
 
 pkgname=stow
 version=2.3.1
-distfiles="http://ftp.gnu.org/gnu"
+distfiles="http://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${version}.tar.gz"
 PREFIX=$HOME/.local
 
 # fetch
 # -L follow the redirection if it exists
 # -o makes the downloaded file's name = ${pkgname}-${version}
-curl -L ${distfiles}/${pkgname}/${pkgname}-${version}.tar.gz -o ${pkgname}-${Version}.tar.gz
+curl -L ${distfiles} -o ${pkgname}-${version}.tar.gz
 
 # extract
 tar -xzf ${pkgname}-${version}.tar.gz
