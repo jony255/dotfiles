@@ -21,6 +21,7 @@ cd ${pkgname}-${version}
 make -j8
 
 # install
+mkdir -p $PREFIX
 make install
 
 echo "Make sure ${PREFIX}/bin is in your path!"
