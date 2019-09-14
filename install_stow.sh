@@ -3,7 +3,7 @@
 pkgname=stow
 version=2.3.1
 distfiles="http://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${version}.tar.gz"
-PREFIX=$HOME/.local
+PREFIX="$HOME/.local"
 
 # fetch
 # -L follow the redirection if it exists

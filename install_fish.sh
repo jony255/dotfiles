@@ -3,7 +3,7 @@
 pkgname=fish
 version=3.0.2
 distfiles="https://github.com/fish-shell/fish-shell/releases/download/${version}/${pkgname}-${version}.tar.gz"
-PREFIX=$HOME/.local
+PREFIX="$HOME/.local"
 
 # fetch
 # -L allows us to be redirected to the aws instance the link points to
