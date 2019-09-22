@@ -14,6 +14,6 @@ include ./config.d/sway_tray.sway
 bindsym $mod+Shift+e exec swaymsg exit
 
 # TODO: change background
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg $HOME/pictures/Wallpapers/ImpressionSunset.jpg fill
 
 font Office Code Pro 10
