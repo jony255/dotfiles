@@ -8,7 +8,10 @@ function main
             source $login_d_script
         end
 
-        exec dbus-launch sway
+        if [ (tty) = "/dev/tty1" ]
+            exec dbus-launch sway
+        end
+
     end
 end
 
