@@ -5,7 +5,10 @@ set {
 	# variables for commonly used programs
     $term termite
     $browser firefox
+
     $tray_script $XDG_CONFIG_HOME/fish/scripts/sway/sway_tray.fish
+    $volume_delta 2
+    $volume_script $XDG_CONFIG_HOME/fish/scripts/sway/volume_control.fish
 
     $left  h  
     $down  j
