@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 pkgname=fish
 version=3.0.2
