@@ -1,4 +1,4 @@
-#!/usr/sh
+#!/bin/sh
 
 pkgname=stow
 version=2.3.1
