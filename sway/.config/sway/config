@@ -1,15 +1,15 @@
-include ./config.d/global_variables.sway
+include ./config.d/global_variables
 
-include ./config.d/bindings_commonly_used_programs.sway
+include ./config.d/bindings_commonly_used_programs
 
-include ./config.d/window_management.sway
-include ./config.d/workspace_management.sway
+include ./config.d/window_management
+include ./config.d/workspace_management
 
-include ./config.d/setup_keyboard.sway
-include ./config.d/setup_xf86_keys.sway
-include ./config.d/setup_touchpad.sway
+include ./config.d/setup_keyboard
+include ./config.d/setup_xf86_keys
+include ./config.d/setup_touchpad
 
-include ./config.d/sway_tray.sway
+include ./config.d/sway_tray
 
 # exit wayland session
 bindsym $mod+Shift+e exec swaymsg exit
