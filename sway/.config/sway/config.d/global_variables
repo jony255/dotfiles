@@ -14,7 +14,7 @@ set {
     $volume_script $scripts_dir/volume_control.fish
 
     $brightness_delta 5
-    $brigntness_script $scripts_dir/brightness_control.sh
+    $brightness_script $scripts_dir/brightness_control.sh
 
     $left  h  
     $down  j

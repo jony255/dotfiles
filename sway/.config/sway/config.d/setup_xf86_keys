@@ -1,4 +1,7 @@
 bindsym {
      XF86AudioRaiseVolume exec $volume_script raise $volume_delta
      XF86AudioLowerVolume exec $volume_script lower $volume_delta
+
+     XF86MonBrightnessUp   exec $brightness_script raise $brightness_delta
+     XF86MonBrightnessDown exec $brightness_script lower $brightness_delta
 }
