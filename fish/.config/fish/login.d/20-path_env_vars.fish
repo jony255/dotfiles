@@ -1,1 +1,1 @@
-# decide tree structure for the scripts folder
+set -gx PATH $PATH /opt/texlive/2019/bin/x86_64-linuxmusl
