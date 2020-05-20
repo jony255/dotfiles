@@ -1,8 +1,8 @@
 set { 
-	# use the super key as mod
+    # use the super key as mod
     $mod Mod4
 
-	# variables for commonly used programs
+    # variables for commonly used programs
     $term termite
     $browser firefox
 
