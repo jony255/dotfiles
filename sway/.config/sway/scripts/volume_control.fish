@@ -8,6 +8,8 @@ function volume_control -a volume_direction volume_delta
         $VOLUME_CMD $VOLUME_FLAGS $volume_delta%+
     else if [ "$volume_direction" = "lower" ]
         $VOLUME_CMD $VOLUME_FLAGS $volume_delta%-
+    else if [ "$volume_direction" = "toggle" ]
+        $VOLUME_CMD $VOLUME_FLAGS toggle
     end
 
 end
