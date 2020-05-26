@@ -40,4 +40,7 @@ vnoremap <silent> <S-Tab> <gv
 nnoremap <Tab>   >>
 nnoremap <S-Tab> <<
 
+" disable Ex mode
+noremap Q <Nop>
+
 colo jony
