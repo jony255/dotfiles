@@ -1,5 +1,5 @@
-set -gx BROSWER firefox
-set -gx EDITOR nvim
-set -gx PAGER less
-set -gx SHELL fish
-set -gx VISUAL nvim
+export BROSWER='firefox'
+export EDITOR='nvim'
+export PAGER='less'
+export SHELL='fish'
+export VISUAL='nvim'
