@@ -25,4 +25,4 @@ mkdir -p $PREFIX
 make install
 
 echo "Make sure ${PREFIX}/bin is in your path!"
-echo 'If it isn't, append it to your path'
+echo 'If it isn\'t, append it to your path'
