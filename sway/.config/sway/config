@@ -6,15 +6,9 @@ include ./config.d/window_management
 include ./config.d/workspace_management
 
 include ./config.d/setup_keyboard
-include ./config.d/setup_xf86_keys
+include ./config.d/setup_system_admin
 include ./config.d/setup_touchpad
+include ./config.d/setup_xf86_keys
 
 include ./config.d/sway_tray
 
-# exit wayland session
-bindsym $mod+Shift+e exec swaymsg exit
-
-# TODO: change background
-output * bg $HOME/pictures/Wallpapers/ImpressionSunset.jpg fill
-
-font Office Code Pro 10
