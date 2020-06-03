@@ -11,4 +11,3 @@ include ./config.d/setup_touchpad
 include ./config.d/setup_xf86_keys
 
 include ./config.d/sway_tray
-

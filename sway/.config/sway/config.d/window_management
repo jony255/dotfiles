@@ -19,3 +19,6 @@ bindsym $mod+t exec swaymsg split toggle
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# I don't like title bars
+default_border pixel 5
