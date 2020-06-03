@@ -1,5 +1,3 @@
-set background=dark
-
 highlight clear
 
 if exists("syntax_on")
@@ -17,8 +15,6 @@ let g:colors_name="jony"
 " Editor settings
 " --------------------------------
 hi Normal          ctermfg=188     ctermbg=232     cterm=none
-
-set background=dark
 
 hi Cursor          ctermfg=233     ctermbg=153     cterm=none
 hi CursorLine      ctermfg=none    ctermbg=234     cterm=none
@@ -132,9 +128,9 @@ hi Define          ctermfg=97      ctermbg=none    cterm=none
 hi Macro           ctermfg=97      ctermbg=none    cterm=none
 hi PreCondit       ctermfg=97      ctermbg=none    cterm=none
 
-hi Type            ctermfg=173    ctermbg=none    cterm=none
+hi Type            ctermfg=173     ctermbg=none    cterm=none
 hi StorageClass    ctermfg=173     ctermbg=none    cterm=none
-hi Structure       ctermfg=173    ctermbg=none    cterm=none
+hi Structure       ctermfg=173     ctermbg=none    cterm=none
 hi Typedef         ctermfg=none    ctermbg=none    cterm=none
 
 hi def link Structure Typedef
