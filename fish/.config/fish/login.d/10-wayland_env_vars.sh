@@ -1,7 +1,7 @@
 export MOZ_ENABLE_WAYLAND='1'
 
 # GUI toolkits
-export GDK_BACKEND='wayland'
+# export GDK_BACKEND='wayland'
 
 # export QT_QPA_PLATFORM='wayland'
 
