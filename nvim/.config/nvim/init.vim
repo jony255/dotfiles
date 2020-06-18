@@ -24,6 +24,9 @@ set clipboard=unnamedplus
 set splitright " when splitting vertically, split right
 set splitbelow " when splitting horizontally, split below
 
+" needed to make the c & cpp 'clang-format on save work'
+" neovim sets it by default, vim doesn't
+filetype plugin on 
 
 " move around splits 
 nnoremap <Space>h <C-W>h
