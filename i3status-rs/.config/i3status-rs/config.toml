@@ -1,0 +1,16 @@
+icons = "awesome"
+
+[[block]]
+block = "backlight"
+
+[[block]]
+block = "battery"
+
+[[block]]
+block = "sound"
+driver = "alsa"
+
+[[block]]
+block = "time"
+interval = 1
+format = "%D %r"
