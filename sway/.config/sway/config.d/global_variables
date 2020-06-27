@@ -8,7 +8,7 @@ set {
 
     $scripts_dir $XDG_CONFIG_HOME/sway/scripts
 
-    $tray_script $scripts_dir/sway_tray.fish
+    $tray_script i3status-rs $XDG_CONFIG_HOME/i3status-rs/config.toml
 
     $volume_delta 2
     $volume_script $scripts_dir/volume_control.fish
