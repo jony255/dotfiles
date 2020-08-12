@@ -3,7 +3,7 @@ set {
     $mod Mod4
 
     # variables for commonly used programs
-    $term termite
+    $term alacritty
     $browser firefox
 
     $scripts_dir $XDG_CONFIG_HOME/sway/scripts
