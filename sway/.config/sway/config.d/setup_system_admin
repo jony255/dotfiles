@@ -5,3 +5,4 @@ font Office Code Pro 10
 bindsym $mod+Shift+e exec swaymsg exit
 
 exec mako
+exec pulseaudio
