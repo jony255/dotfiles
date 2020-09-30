@@ -1,6 +1,6 @@
 output * bg $HOME/pictures/Wallpapers/ImpressionSunset.jpg fill
 
-font Office Code Pro 10
+font OfficeCodePro Nerd Font 10
 
 bindsym $mod+Shift+e exec swaymsg exit
 
