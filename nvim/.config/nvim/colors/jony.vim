@@ -98,6 +98,7 @@ hi SpellRare       ctermfg=none    ctermbg=53      cterm=none
 " --------------------------------
 " Variable types
 " --------------------------------
+hi Variable        ctermfg=248     ctermbg=none    cterm=none
 hi StringDelimiter ctermfg=58      ctermbg=none    cterm=none
 hi Identifier      ctermfg=183     ctermbg=none    cterm=none
 
@@ -145,6 +146,7 @@ hi Number          ctermfg=141     ctermbg=none    cterm=none
 hi Boolean         ctermfg=141     ctermbg=none    cterm=none
 hi Float           ctermfg=141     ctermbg=none    cterm=none
 hi Function        ctermfg=221     ctermbg=none    cterm=none
+hi Member          ctermfg=81      ctermbg=none    cterm=none
 
 hi Comment         ctermfg=167     ctermbg=none    cterm=italic
 " cool yellowy color 221
