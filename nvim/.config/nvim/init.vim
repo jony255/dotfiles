@@ -1,5 +1,9 @@
 set nocompatible
 
+call plug#begin(stdpath('data') . '/plugged')
+    Plug 'airblade/vim-gitgutter'
+call plug#end()
+
 set number
 set relativenumber
 set title
@@ -68,3 +72,5 @@ autocmd InsertEnter,InsertLeave * match TrailingWhitespace /\s\+$/
 autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 
 colo jony
+" For git-gutter
+set updatetime=100
