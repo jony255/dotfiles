@@ -5,6 +5,8 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'nvim-lua/diagnostic-nvim'
     Plug 'nvim-lua/completion-nvim'
 
+    Plug 'jackguo380/vim-lsp-cxx-highlight'
+
     Plug 'airblade/vim-gitgutter'
 call plug#end()
 
@@ -117,6 +119,12 @@ call sign_define("LspDiagnosticsErrorSign", {"text" : "E", "texthl" : "LspDiagno
 call sign_define("LspDiagnosticsWarningSign", {"text" : "W", "texthl" : "LspDiagnosticsWarning"})
 call sign_define("LspDiagnosticInformationSign", {"text" : "I", "texthl" : "LspDiagnosticsInformation"})
 call sign_define("LspDiagnosticHintSign", {"text" : "H", "texthl" : "LspDiagnosticsHint"})
+
+" Setup the syntax highlighting how I want.
+" I will eventually change to tree sitter once Neovim_v5.0 is released.
+hi! link LspCxxHlGroupMemberVariable Member
+hi! link LspCxxHlSymVariable Variable
+hi! link LspCxxHlSymParameter Variable
 
 " For git-gutter
 set updatetime=100
