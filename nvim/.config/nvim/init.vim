@@ -1,6 +1,10 @@
 set nocompatible
 
 call plug#begin(stdpath('data') . '/plugged')
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/diagnostic-nvim'
+    Plug 'nvim-lua/completion-nvim'
+
     Plug 'airblade/vim-gitgutter'
 call plug#end()
 
@@ -72,5 +76,47 @@ autocmd InsertEnter,InsertLeave * match TrailingWhitespace /\s\+$/
 autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 
 colo jony
+
+lua <<END
+    local on_attach_vim = function(client)
+        require'completion'.on_attach(client)
+        require'diagnostic'.on_attach(client)
+    end
+
+    nvim_lsp = require'nvim_lsp'
+
+    nvim_lsp.ccls.setup{
+        on_attach=require'completion'.on_attach,
+        init_options = {
+            highlight = {
+                lsRanges = true;
+            },
+            -- neovim's lsp doesn't support snippet insertion at the moment
+            completion = {
+                enableSnippetInsertion = true;
+            },
+        }
+    }
+
+END
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+let g:completion_matching_strategy_list = ['exact', 'fuzzy', 'substring', 'all']
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+high LspDiagnosticsError ctermbg=160
+high LspDiagnosticsInformation ctermbg=160
+high LspDiagnosticsWarning ctermbg=160
+high LspDiagnosticsInformation ctermbg=160
+
+call sign_define("LspDiagnosticsErrorSign", {"text" : "E", "texthl" : "LspDiagnosticsError"})
+call sign_define("LspDiagnosticsWarningSign", {"text" : "W", "texthl" : "LspDiagnosticsWarning"})
+call sign_define("LspDiagnosticInformationSign", {"text" : "I", "texthl" : "LspDiagnosticsInformation"})
+call sign_define("LspDiagnosticHintSign", {"text" : "H", "texthl" : "LspDiagnosticsHint"})
+
 " For git-gutter
 set updatetime=100
