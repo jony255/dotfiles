@@ -88,7 +88,7 @@ lua <<END
     nvim_lsp = require'nvim_lsp'
 
     nvim_lsp.ccls.setup{
-        on_attach=require'completion'.on_attach,
+        on_attach=on_attach_vim,
         init_options = {
             highlight = {
                 lsRanges = true;
@@ -106,6 +106,8 @@ END
 set completeopt=menuone,noinsert,noselect
 
 let g:completion_matching_strategy_list = ['exact', 'fuzzy', 'substring', 'all']
+
+let g:diagnostic_enable_virtual_text = 1
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
