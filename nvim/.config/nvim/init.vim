@@ -123,6 +123,7 @@ END
 set completeopt=menuone,noinsert,noselect
 
 let g:completion_matching_strategy_list = ['exact', 'fuzzy', 'substring', 'all']
+let g:completion_enable_snippet = 'UltiSnips'
 
 let g:diagnostic_enable_virtual_text = 1
 
