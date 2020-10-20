@@ -5,6 +5,9 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'nvim-lua/diagnostic-nvim'
     Plug 'nvim-lua/completion-nvim'
 
+"    Plug 'nvim-treesitter/nvim-treesitter'
+"    Plug 'nvim-treesitter/playground'
+
     Plug 'jackguo380/vim-lsp-cxx-highlight'
 
     Plug 'SirVer/ultisnips'
@@ -101,6 +104,18 @@ lua <<END
             },
         }
     }
+
+--    require'nvim-treesitter.configs'.setup {
+--        highlight = {
+--            enable = true,    -- false will disable the whole extension
+--        },
+--        playground = {
+--            enable = true,
+--            disable = {},
+--            updatetime = 1, -- Debounced time for highlighting nodes in the playground from source code
+--            persist_queries = false -- Whether the query persists across vim sessions
+--        }
+--    }
 
 END
 
