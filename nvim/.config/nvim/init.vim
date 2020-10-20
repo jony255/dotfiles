@@ -7,6 +7,8 @@ call plug#begin(stdpath('data') . '/plugged')
 
     Plug 'jackguo380/vim-lsp-cxx-highlight'
 
+    Plug 'SirVer/ultisnips'
+
     Plug 'airblade/vim-gitgutter'
 call plug#end()
 
@@ -108,6 +110,11 @@ set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'fuzzy', 'substring', 'all']
 
 let g:diagnostic_enable_virtual_text = 1
+
+let g:UltiSnipsSnippetDirectories = [stdpath('config').'/ulti_snips']
+let g:UltiSnipsExpandTrigger = '<NOP>'
+let g:UltiSnipsJumpForwardTrigger = '<c-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
