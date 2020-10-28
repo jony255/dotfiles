@@ -1,0 +1,8 @@
+# Default config for imv
+
+[binds]
+# Panning
+h = pan -50 0
+j = pan 0 50
+k = pan 0 -50
+l = pan 50 0
