@@ -90,9 +90,9 @@ lua <<END
         require'diagnostic'.on_attach(client)
     end
 
-    nvim_lsp = require'nvim_lsp'
+    lsp_config = require'lspconfig'
 
-    nvim_lsp.ccls.setup{
+    lsp_config.ccls.setup{
         on_attach=on_attach_vim,
         init_options = {
             highlight = {
