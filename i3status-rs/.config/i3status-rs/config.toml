@@ -8,9 +8,14 @@ block = "battery"
 
 [[block]]
 block = "sound"
-driver = "alsa"
+driver = "pulseaudio"
 
 [[block]]
 block = "time"
 interval = 1
 format = "%D %r"
+
+[[block]]
+block = "music"
+player = "spotify"
+buttons = ["play", "next"]
