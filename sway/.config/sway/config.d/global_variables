@@ -1,4 +1,4 @@
-set { 
+set {
     # use the super key as mod
     $mod Mod4
 
@@ -16,7 +16,7 @@ set {
     $brightness_delta 5
     $brightness_script $scripts_dir/brightness_control.sh
 
-    $left  h  
+    $left  h
     $down  j
     $up    k
     $right l

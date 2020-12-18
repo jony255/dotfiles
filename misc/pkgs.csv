@@ -13,7 +13,7 @@ curl
 aria2
 wget
 
-# embedded 
+# embedded
 cross-arm-none-eabi-binutils
 cross-arm-none-eabi-gcc
 cross-arm-none-eabi-gdb
@@ -24,7 +24,7 @@ stlink
 neovim
 vim
 
-# wayland 
+# wayland
 grim
 slurp
 sway
