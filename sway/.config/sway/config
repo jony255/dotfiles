@@ -1,6 +1,7 @@
 include ./config.d/global_variables
 
 include ./config.d/bindings_commonly_used_programs
+include ./config.d/bindings_personal_scripts
 
 include ./config.d/window_management
 include ./config.d/workspace_management
