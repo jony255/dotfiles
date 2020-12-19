@@ -11,7 +11,7 @@ set {
     $tray_script i3status-rs $XDG_CONFIG_HOME/i3status-rs/config.toml
 
     $volume_delta 2
-    $volume_script $scripts_dir/volume_control.fish
+    $volume_script $scripts_dir/volume_control.sh
 
     $brightness_delta 5
     $brightness_script $scripts_dir/brightness_control.sh
