@@ -2,7 +2,7 @@
 bindsym {
     $mod+$left  focus left
     $mod+$down  focus down
-    $mod+$up    focus up 
+    $mod+$up    focus up
     $mod+$right focus right
 }
 

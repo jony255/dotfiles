@@ -1,8 +1,8 @@
 bar {
     position top
 
-    status_command $tray_script 
-    
+    status_command $tray_script
+
     colors {
         statusline #ffffff
         background #000000

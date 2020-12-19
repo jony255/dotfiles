@@ -240,7 +240,7 @@ colors:
     magenta: '#ec93d3'
     cyan:    '#93e0e3'
     white:   '#ffffff'
-     
+
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based

@@ -23,14 +23,14 @@ hi CursorLineNR    ctermfg=255     ctermbg=none    cterm=italic
 
 " -----------------
 " - Number column -
-" ----------------- 
-hi CursorColumn    ctermfg=none    ctermbg=234     cterm=none 
+" -----------------
+hi CursorColumn    ctermfg=none    ctermbg=234     cterm=none
 hi FoldColumn      ctermfg=59      ctermbg=234     cterm=none
 hi SignColumn      ctermfg=243     ctermbg=236     cterm=none
 hi Folded          ctermfg=145     ctermbg=16      cterm=none
 
 " -------------------------
-" - Window/Tab delimiters - 
+" - Window/Tab delimiters -
 " -------------------------
 hi VertSplit       ctermfg=243     ctermbg=16      cterm=none
 hi ColorColumn     ctermfg=none    ctermbg=16      cterm=none
