@@ -1,17 +1,19 @@
 #!/bin/sh
 
+# TODO: Implement error checking for inputs.
+
 brightness_control() {
-    brightness_direction=$1
-    brightness_delta=$2
+    BRIGHTNESS_DIRECTION="$1"
+    BRIGHTNESS_DELTA="$2"
 
     BRIGHTNESS_CMD='light'
     BRIGHTNESS_FLAGS_RAISE='-A'
     BRIGHTNESS_FLAGS_LOWER='-U'
 
-    if [ "$brightness_direction" = 'raise' ]; then
-        $BRIGHTNESS_CMD $BRIGHTNESS_FLAGS_RAISE $brightness_delta
-    elif [ "$brightness_direction" = 'lower' ]; then
-        $BRIGHTNESS_CMD $BRIGHTNESS_FLAGS_LOWER $brightness_delta
+    if [ "$BRIGHTNESS_DIRECTION" = 'raise' ]; then
+        $BRIGHTNESS_CMD $BRIGHTNESS_FLAGS_RAISE $BRIGHTNESS_DELTA
+    elif [ "$BRIGHTNESS_DIRECTION" = 'lower' ]; then
+        $BRIGHTNESS_CMD $BRIGHTNESS_FLAGS_LOWER $BRIGHTNESS_DELTA
     fi
 }
 
