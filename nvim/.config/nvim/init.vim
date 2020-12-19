@@ -135,10 +135,14 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-high LspDiagnosticsError ctermbg=160
-high LspDiagnosticsInformation ctermbg=160
-high LspDiagnosticsWarning ctermbg=160
-high LspDiagnosticsInformation ctermbg=160
+hi LspDiagnosticsVirtualTextError ctermbg=160
+hi LspDiagnosticsSignError ctermbg=160
+
+hi LspDiagnosticsVirtualTextWarning ctermbg=160
+hi LspDiagnosticsSignWarning ctermbg=160
+
+hi LspDiagnosticsVirtualTextInformation ctermbg=160
+hi LspDiagnosticsSignInformation ctermbg=160
 
 call sign_define("LspDiagnosticsErrorSign", {"text" : "E", "texthl" : "LspDiagnosticsError"})
 call sign_define("LspDiagnosticsWarningSign", {"text" : "W", "texthl" : "LspDiagnosticsWarning"})
