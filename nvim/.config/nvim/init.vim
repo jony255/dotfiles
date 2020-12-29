@@ -21,6 +21,8 @@ set title
 set lazyredraw
 set ruler
 
+set nowrap
+
 set showmatch
 set laststatus=2
 
