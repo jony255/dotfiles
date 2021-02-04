@@ -92,18 +92,18 @@ lua <<END
 
     lsp_config = require'lspconfig'
 
-    lsp_config.ccls.setup{
+    lsp_config.clangd.setup{
         on_attach=on_attach_vim,
         init_options = {
             highlight = {
                 lsRanges = true;
             },
-            -- neovim's lsp doesn't support snippet insertion at the moment
-            completion = {
-                enableSnippetInsertion = true;
-            },
         }
     }
+
+    lsp_config.rust_analyzer.setup({
+        on_attach=on_attach_vim,
+    })
 
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
       vim.lsp.diagnostic.on_publish_diagnostics, {
