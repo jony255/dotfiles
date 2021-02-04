@@ -1,6 +1,10 @@
-input "2:18:FocalTechPS/2_FocalTech_Touchpad" {
+set $touchpad "2:18:FocalTechPS/2_FocalTech_Touchpad"
+
+input $touchpad {
     tap enabled
     natural_scroll enable
     dwt enabled
     events disabled_on_external_mouse
 }
+
+bindsym $mod+m exec swaymsg input $touchpad events toggle
