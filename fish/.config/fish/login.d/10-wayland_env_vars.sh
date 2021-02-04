@@ -14,3 +14,5 @@ export ELM_DISPLAY='wl'
 export ELM_ACCEL='gl'
 
 export WLR_SESSION='direct'
+
+export _JAVA_AWT_WM_NONREPARENTING=1
