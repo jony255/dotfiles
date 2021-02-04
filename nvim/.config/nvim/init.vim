@@ -2,7 +2,6 @@ set nocompatible
 
 call plug#begin(stdpath('data') . '/plugged')
     Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/diagnostic-nvim'
     Plug 'nvim-lua/completion-nvim'
 
 "    Plug 'nvim-treesitter/nvim-treesitter'
@@ -89,7 +88,6 @@ colo jony
 lua <<END
     local on_attach_vim = function(client)
         require'completion'.on_attach(client)
-        require'diagnostic'.on_attach(client)
     end
 
     lsp_config = require'lspconfig'
@@ -106,6 +104,24 @@ lua <<END
             },
         }
     }
+
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+      vim.lsp.diagnostic.on_publish_diagnostics, {
+        -- This will disable virtual text, like doing:
+        -- let g:diagnostic_enable_virtual_text = 0
+        virtual_text = true,
+
+        -- This is similar to:
+        -- let g:diagnostic_show_sign = 1
+        -- To configure sign display,
+        --  see: ":help vim.lsp.diagnostic.set_signs()"
+        signs = true,
+
+        -- This is similar to:
+        -- "let g:diagnostic_insert_delay = 1"
+        update_in_insert = true,
+      }
+    )
 
 --    require'nvim-treesitter.configs'.setup {
 --        highlight = {
@@ -126,8 +142,6 @@ set completeopt=menuone,noinsert,noselect
 
 let g:completion_matching_strategy_list = ['exact', 'fuzzy', 'substring', 'all']
 let g:completion_enable_snippet = 'UltiSnips'
-
-let g:diagnostic_enable_virtual_text = 1
 
 let g:UltiSnipsSnippetDirectories = [stdpath('config').'/ulti_snips']
 let g:UltiSnipsExpandTrigger = '<NOP>'
