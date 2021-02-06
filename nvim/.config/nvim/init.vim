@@ -92,7 +92,7 @@ lua <<END
 
     lsp_config = require'lspconfig'
 
-    lsp_config.clangd.setup{
+    lsp_config.ccls.setup{
         on_attach=on_attach_vim,
         init_options = {
             highlight = {
