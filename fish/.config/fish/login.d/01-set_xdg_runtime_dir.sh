@@ -1,5 +1,5 @@
 if [ -z "$XDG_RUNTIME_DIR" ]
-    export XDG_RUNTIME_DIR="/tmp/$USER-runtime-dir"
+    export XDG_RUNTIME_DIR='/tmp/'(id -u)
 
     if [ ! -d "$XDG_RUNTIME_DIR" ]
         mkdir -p "$XDG_RUNTIME_DIR"
