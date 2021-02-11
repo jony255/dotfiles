@@ -20,4 +20,6 @@ set {
     $down  j
     $up    k
     $right l
+
+    $touchpad "2:18:FocalTechPS/2_FocalTech_Touchpad"
 }
