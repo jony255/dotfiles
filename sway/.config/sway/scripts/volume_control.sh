@@ -18,4 +18,4 @@ volume_control() {
     fi
 }
 
-volume_control $@
+volume_control "$@"

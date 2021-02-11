@@ -17,4 +17,4 @@ brightness_control() {
     fi
 }
 
-brightness_control $@
+brightness_control "$@"
