@@ -1,4 +1,5 @@
 input "1:1:AT_Translated_Set_2_keyboard" {
     repeat_delay 275
+    repeat_rate 25
     xkb_numlock enabled
 }
