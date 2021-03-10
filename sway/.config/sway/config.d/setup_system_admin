@@ -3,6 +3,7 @@ output * bg $HOME/pictures/Wallpapers/ImpressionSunset.jpg fill
 font OfficeCodePro Nerd Font 10
 
 bindsym $mod+Shift+e exec swaymsg exit
+bindsym $mod+Shift+r exec swaymsg reload
 
 exec mako
 exec pulseaudio
