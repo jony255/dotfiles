@@ -6,7 +6,7 @@ brightness_control() {
     BRIGHTNESS_DIRECTION="$1"
     BRIGHTNESS_DELTA="$2"
 
-    BRIGHTNESS_CMD='light'
+    BRIGHTNESS_CMD='brillo'
     BRIGHTNESS_FLAGS_RAISE='-A'
     BRIGHTNESS_FLAGS_LOWER='-U'
 
