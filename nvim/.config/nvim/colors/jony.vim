@@ -42,7 +42,7 @@ hi TabLineSel      ctermfg=16      ctermbg=255     cterm=none
 " - File Navigation / Searching -
 " -------------------------------
 hi Directory       ctermfg=186     ctermbg=none   cterm=none
-hi Search          ctermfg=217     ctermbg=16     cterm=none
+hi Search          ctermfg=180     ctermbg=90     cterm=none
 hi IncSearch       ctermfg=180     ctermbg=90     cterm=none
 
 " -----------------
