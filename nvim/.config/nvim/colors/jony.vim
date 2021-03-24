@@ -14,7 +14,7 @@ let g:colors_name="jony"
 " --------------------------------
 " Editor settings
 " --------------------------------
-hi Normal          ctermfg=188     ctermbg=232     cterm=none
+hi Normal          ctermfg=188     ctermbg=0       cterm=none
 
 hi Cursor          ctermfg=233     ctermbg=153     cterm=none
 hi CursorLine      ctermfg=none    ctermbg=234     cterm=none
@@ -62,7 +62,7 @@ hi MoreMsg         ctermfg=none    ctermbg=none    cterm=none
 hi MatchParen      ctermfg=231     ctermbg=60      cterm=none
 hi Visual          ctermfg=none    ctermbg=237     cterm=none
 hi VisualNOS       ctermfg=none    ctermbg=235     cterm=none
-hi NonText         ctermfg=240     ctermbg=232     cterm=none
+hi NonText         ctermfg=240     ctermbg=0       cterm=none
 hi Todo            ctermfg=0       ctermbg=11      cterm=none
 hi Underlined      ctermfg=none    ctermbg=none    cterm=none
 hi Error           ctermfg=none    ctermbg=none    cterm=none
