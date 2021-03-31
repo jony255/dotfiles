@@ -3,6 +3,10 @@ bindsym {
     XF86AudioLowerVolume exec $volume_script lower $volume_delta
     XF86AudioMute exec $volume_script toggle
 
+    XF86AudioPrev exec playerctl previous
+    XF86AudioPlay exec playerctl play-pause
+    XF86AudioNext exec playerctl next
+
     XF86MonBrightnessUp   exec $brightness_script raise $brightness_delta
     XF86MonBrightnessDown exec $brightness_script lower $brightness_delta
 
