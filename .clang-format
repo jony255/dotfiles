@@ -1,4 +1,3 @@
-# BreakBeforeBinaryOperators: None or NonAssignment
 AlignConsecutiveMacros: true
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: false
@@ -6,8 +5,8 @@ AllowShortLoopsOnASingleLine: false
 AlwaysBreakBeforeMultilineStrings: true
 BinPackArguments: true
 BinPackParameters: true
-# change ColumnLimit as needed
-ColumnLimit: 79
+BreakBeforeBinaryOperators: NonAssignment
+ColumnLimit: 80
 IndentCaseLabels: true
 IndentFunctionDeclarationAfterType: true
 IndentGotoLabels: false
