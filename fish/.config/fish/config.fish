@@ -1,11 +1,11 @@
 #!/usr/bin/env fish
 
 function main
-    set LOGIN_DIR "$HOME/.login_d_fish"
+    set LOGIN_DIR "$HOME/.logind_fish"
 
     if status is-login
-        for login_d_script in (find -L $LOGIN_DIR -name '*.fish' -o -name '*.sh' -type f)
-            source $login_d_script
+        for logind_script in (find -L $LOGIN_DIR -name '*.fish' -o -name '*.sh' -type f)
+            source $logind_script
         end
 
         if [ (tty) = "/dev/tty1" ]
