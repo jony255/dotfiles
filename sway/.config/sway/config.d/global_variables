@@ -22,4 +22,5 @@ set {
     $right l
 
     $touchpad "2:18:FocalTechPS/2_FocalTech_Touchpad"
+    $another_touchpad "1267:12615:DELL0A1E:00_04F3:3147_Touchpad"
 }

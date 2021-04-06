@@ -4,3 +4,10 @@ input $touchpad {
     dwt enabled
     events disabled_on_external_mouse
 }
+
+input $another_touchpad {
+    tap enabled
+    natural_scroll enable
+    dwt enabled
+    events disabled_on_external_mouse
+}
