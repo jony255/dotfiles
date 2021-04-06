@@ -1,10 +1,13 @@
-"uBlock Origin"
-"Privacy Badger"
-"HTTPS Everywhere"
-"Decentraleyes"
-"Privacy Possum"
-"Copy PlainText"
-"Reddit Enhancement Suite"
-"Old Reddit Redirect"
-"Country Flags & IP Whois"
-"Vim Vixen"
+ClearURLs
+LocalCDN
+Privacy Badger
+Privacy Possum
+uBlock Origin
+
+Firefox Multi-Account Containers
+Cookie AutoDelete
+Google Container
+Temporary Containers
+
+Old Reddit Redirect
+Vim Vixen
