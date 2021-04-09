@@ -16,6 +16,8 @@ set {
     $brightness_delta 5
     $brightness_script $scripts_dir/brightness_control.sh
 
+    $pipewire_script $scripts_dir/pipewire.sh
+
     $left  h
     $down  j
     $up    k

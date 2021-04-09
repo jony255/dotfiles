@@ -6,4 +6,4 @@ bindsym $mod+Shift+e exec swaymsg exit
 bindsym $mod+Shift+r exec swaymsg reload
 
 exec mako
-exec pipewire
+exec $pipewire_script
