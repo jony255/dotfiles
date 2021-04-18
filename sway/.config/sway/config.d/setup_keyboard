@@ -1,10 +1,4 @@
-input "1:1:AT_Translated_Set_2_keyboard" {
-    repeat_delay 275
-    repeat_rate 25
-    xkb_numlock enabled
-}
-
-input "1452:591:Keychron_Keychron_K1" {
+input type:keyboard {
     repeat_delay 275
     repeat_rate 25
     xkb_numlock enabled
