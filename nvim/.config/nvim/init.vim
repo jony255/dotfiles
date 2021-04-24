@@ -1,5 +1,7 @@
 set nocompatible
 
+let mapleader = " " " Giving this a whirl
+
 call plug#begin(stdpath('data') . '/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
@@ -73,7 +75,6 @@ autocmd ColorScheme * highlight TrailingWhitespace ctermbg=109 guibg=red
 " 1.)
 " Will match trailing whitespace except for the line I'm on
 "autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
-"autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 " 2.)
 " Will match trailing whitespace, even the line I'm on
