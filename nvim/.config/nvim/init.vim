@@ -174,3 +174,6 @@ hi! link LspCxxHlSymParameter Variable
 
 " For git-gutter
 set updatetime=100
+
+nmap <Leader>hn <Plug>(GitGutterNextHunk)
+nmap <Leader>hN <Plug>(GitGutterPrevHunk)
