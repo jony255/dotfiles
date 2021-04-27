@@ -6,7 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
 
-"    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/nvim-treesitter'
 "    Plug 'nvim-treesitter/playground'
 
     Plug 'jackguo380/vim-lsp-cxx-highlight'
@@ -124,19 +124,36 @@ lua <<END
       }
     )
 
---    require'nvim-treesitter.configs'.setup {
---        highlight = {
---            enable = true,    -- false will disable the whole extension
---        },
+    require'nvim-treesitter.configs'.setup {
+        highlight = {
+            enable = false,    -- false will disable the whole extension
+        },
+        indent = {
+            enable = true,
+        },
 --        playground = {
 --            enable = true,
 --            disable = {},
 --            updatetime = 1, -- Debounced time for highlighting nodes in the playground from source code
 --            persist_queries = false -- Whether the query persists across vim sessions
 --        }
---    }
+    }
 
+    -- https://github.com/nvim-treesitter/nvim-treesitter#folding
+    -- The nvim documentation (h: vim.o) says to use vim.o when you want to
+    -- 'Get or set editor options, like :set' Which is what the link above
+    -- does.
+    --     set foldmethod=expr
+    --     set foldexpr=nvim_treesitter#foldexpr()
+    -- However the link does say that:
+    --     Tree-sitter based folding.
+    --         (Technically not a module because it's per windows and not per buffer.)
+	-- Another thing to note is that (h: foldnestmax) says that its local to the window
+    vim.wo.foldmethod = 'expr'
+    vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+    vim.wo.foldnestmax = 2
 END
+
 
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
