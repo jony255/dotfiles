@@ -150,3 +150,12 @@ hi Member          ctermfg=81      ctermbg=none    cterm=none
 
 hi Comment         ctermfg=167     ctermbg=none    cterm=italic
 " cool yellowy color 221
+
+"--------------------------------------------------------------------
+" Tree Sitter links
+"--------------------------------------------------------------------
+hi link TSField    Member
+hi link TSProperty Member
+
+hi link TSParameter          Variable
+hi link TSParameterReference Variable
