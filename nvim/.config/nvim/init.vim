@@ -7,7 +7,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'nvim-lua/completion-nvim'
 
     Plug 'nvim-treesitter/nvim-treesitter'
-"    Plug 'nvim-treesitter/playground'
+    Plug 'nvim-treesitter/playground'
 
     Plug 'jackguo380/vim-lsp-cxx-highlight'
 
@@ -131,12 +131,12 @@ lua <<END
         indent = {
             enable = true,
         },
---        playground = {
---            enable = true,
---            disable = {},
---            updatetime = 1, -- Debounced time for highlighting nodes in the playground from source code
---            persist_queries = false -- Whether the query persists across vim sessions
---        }
+        playground = {
+            enable = true,
+            disable = {},
+            updatetime = 1, -- Debounced time for highlighting nodes in the playground from source code
+            persist_queries = false -- Whether the query persists across vim sessions
+        }
     }
 
     -- https://github.com/nvim-treesitter/nvim-treesitter#folding
