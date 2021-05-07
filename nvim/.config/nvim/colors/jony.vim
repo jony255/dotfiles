@@ -27,7 +27,7 @@ hi CursorLineNR    ctermfg=255     ctermbg=none    cterm=italic
 hi CursorColumn    ctermfg=none    ctermbg=234     cterm=none
 hi FoldColumn      ctermfg=59      ctermbg=234     cterm=none
 hi SignColumn      ctermfg=243     ctermbg=236     cterm=none
-hi Folded          ctermfg=145     ctermbg=16      cterm=none
+hi Folded          ctermfg=none     ctermbg=235      cterm=none
 
 " -------------------------
 " - Window/Tab delimiters -
@@ -159,3 +159,4 @@ hi link TSProperty Member
 
 hi link TSParameter          Variable
 hi link TSParameterReference Variable
+hi link TSVariable           Variable
