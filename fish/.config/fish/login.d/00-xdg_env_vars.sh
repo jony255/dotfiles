@@ -5,3 +5,4 @@ export XDG_DATA_DIRS="/usr/local/share:/usr/share:$XDG_DATA_HOME/flatpak/exports
 export XDG_CONFIG_DIRS='/etc/xdg'
 
 export XDG_CURRENT_DESKTOP='sway'
+export XDG_SESSION_TYPE='wayland'
