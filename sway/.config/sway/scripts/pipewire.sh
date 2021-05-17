@@ -2,7 +2,8 @@
 
 conditionally_start_pipewire() {
     if ! pgrep pipwire; then
-        exec pipewire
+        pipewire &
+        pipewire-pulse &
     fi
 }
 
