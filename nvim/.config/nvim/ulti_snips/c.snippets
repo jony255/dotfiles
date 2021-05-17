@@ -29,3 +29,12 @@ $1($2) {
     $0
 }
 endsnippet
+
+snippet guard "define header guards"
+#ifndef $1
+#define $1
+
+    $0
+
+#endif /* $1 */
+endsnippet

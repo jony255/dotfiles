@@ -194,3 +194,8 @@ set updatetime=100
 
 nmap <Leader>hn <Plug>(GitGutterNextHunk)
 nmap <Leader>hN <Plug>(GitGutterPrevHunk)
+
+augroup FixCHeaderFiles
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+augroup END
