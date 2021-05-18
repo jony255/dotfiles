@@ -39,6 +39,10 @@ snippet guard "define header guards"
 #endif /* $1 */
 endsnippet
 
-snippet passert "assert a pointer"
+snippet assert_ptr "assert a pointer"
 assert($0 != NULL);
+endsnippet
+
+snippet assert_pn "assert a positive number"
+assert($0 > 0);
 endsnippet
