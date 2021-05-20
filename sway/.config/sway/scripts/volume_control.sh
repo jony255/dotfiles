@@ -7,7 +7,7 @@ volume_control() {
     VOLUME_DELTA="$2"
 
     VOLUME_CMD='amixer'
-    VOLUME_FLAGS='-c Generic set Master'
+    VOLUME_FLAGS='-D pipewire set Master'
 
     if [ "$VOLUME_DIRECTION" = "raise" ]; then
         $VOLUME_CMD $VOLUME_FLAGS ${VOLUME_DELTA}%+
