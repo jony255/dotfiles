@@ -7,3 +7,6 @@ bindsym $mod+Shift+r exec swaymsg reload
 
 exec mako
 exec $pipewire_script
+
+exec xdg-desktop-portal -r
+exec xdg-desktop-portal-wlr -r
