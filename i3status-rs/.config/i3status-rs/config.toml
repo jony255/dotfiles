@@ -1,6 +1,11 @@
 icons = "awesome"
 
 [[block]]
+block = "net"
+device = "wlp2s0"
+format = "{ip} {signal_strength}"
+
+[[block]]
 block = "backlight"
 
 [[block]]
