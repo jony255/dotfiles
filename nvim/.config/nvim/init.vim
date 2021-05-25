@@ -9,7 +9,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'nvim-treesitter/playground'
 
-    Plug 'jackguo380/vim-lsp-cxx-highlight'
+    "Plug 'jackguo380/vim-lsp-cxx-highlight'
 
     Plug 'SirVer/ultisnips'
 
@@ -126,7 +126,7 @@ lua <<END
 
     require'nvim-treesitter.configs'.setup {
         highlight = {
-            enable = false,    -- false will disable the whole extension
+            enable = true,    -- false will disable the whole extension
         },
         indent = {
             enable = true,
