@@ -96,13 +96,20 @@ lua <<END
 
     lsp_config = require'lspconfig'
 
-    lsp_config.ccls.setup{
-        on_attach=on_attach_vim,
-        init_options = {
-            highlight = {
-                lsRanges = true;
-            },
-        }
+    -- Use ccls when switching to lsp-based highlighting, I don't think clangd can
+    --lsp_config.ccls.setup{
+    --    on_attach=on_attach_vim,
+    --    init_options = {
+    --        highlight = {
+    --            lsRanges = true;
+    --        },
+    --    }
+    --}
+
+
+    lsp_config.clangd.setup{
+        on_attach = on_attach_vim,
+        cmd = { "clangd", "--suggest-missing-includes"},
     }
 
     lsp_config.rust_analyzer.setup({
