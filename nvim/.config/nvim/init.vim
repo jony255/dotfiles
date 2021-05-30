@@ -87,83 +87,8 @@ autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 colo jony
 
 lua <<END
-    local on_attach_vim = function(client)
-        require'completion'.on_attach(client)
-    end
-
-    lsp_config = require'lspconfig'
-
-    -- Use ccls when switching to lsp-based highlighting, I don't think clangd can
-    --lsp_config.ccls.setup{
-    --    on_attach=on_attach_vim,
-    --    init_options = {
-    --        highlight = {
-    --            lsRanges = true;
-    --        },
-    --    }
-    --}
-
-
-    lsp_config.clangd.setup{
-        on_attach = on_attach_vim,
-        cmd = { "clangd", "--suggest-missing-includes"},
-    }
-
-    lsp_config.rust_analyzer.setup({
-        on_attach=on_attach_vim,
-    })
-
-    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-      vim.lsp.diagnostic.on_publish_diagnostics, {
-        -- This will disable virtual text, like doing:
-        -- let g:diagnostic_enable_virtual_text = 0
-        virtual_text = true,
-
-        -- This is similar to:
-        -- let g:diagnostic_show_sign = 1
-        -- To configure sign display,
-        --  see: ":help vim.lsp.diagnostic.set_signs()"
-        signs = true,
-
-        -- This is similar to:
-        -- "let g:diagnostic_insert_delay = 1"
-        update_in_insert = true,
-      }
-    )
-
-    require'nvim-treesitter.configs'.setup {
-        highlight = {
-            enable = true,    -- false will disable the whole extension
-        },
-        indent = {
-            enable = true,
-        },
-        playground = {
-            enable = true,
-            disable = {},
-            updatetime = 1, -- Debounced time for highlighting nodes in the playground from source code
-            persist_queries = false -- Whether the query persists across vim sessions
-        },
-        query_linter = {
-            enable = true,
-            use_virtual_text = true,
-            lint_events = {"BufWrite", "CursorHold" },
-        },
-    }
-
-    -- https://github.com/nvim-treesitter/nvim-treesitter#folding
-    -- The nvim documentation (h: vim.o) says to use vim.o when you want to
-    -- 'Get or set editor options, like :set' Which is what the link above
-    -- does.
-    --     set foldmethod=expr
-    --     set foldexpr=nvim_treesitter#foldexpr()
-    -- However the link does say that:
-    --     Tree-sitter based folding.
-    --         (Technically not a module because it's per windows and not per buffer.)
-	-- Another thing to note is that (h: foldnestmax) says that its local to the window
-    vim.wo.foldmethod = 'expr'
-    vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
-    vim.wo.foldnestmax = 2
+    require'config/lsp'
+    require'config/treesitter'
 END
 
 
