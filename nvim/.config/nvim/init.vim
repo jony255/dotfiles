@@ -84,6 +84,9 @@ autocmd InsertEnter,InsertLeave * match TrailingWhitespace /\s\+$/
 " recently open a file.
 autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 
+" Remove 'TrailingWhitespace' highlight group from lsp hover
+autocmd FileType lsp_markdown hi clear TrailingWhitespace
+
 colo jony
 
 lua <<END
