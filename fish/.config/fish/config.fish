@@ -4,7 +4,7 @@ function main
     set LOGIN_DIR "$HOME/.logind_fish"
 
     if status is-login
-        for logind_script in (find -L $LOGIN_DIR -name '*.fish' -o -name '*.sh' -type f)
+        for logind_script in (find -L $LOGIN_DIR -name '*.fish' -o -name '*.sh' -type f | sort)
             source $logind_script
         end
 
