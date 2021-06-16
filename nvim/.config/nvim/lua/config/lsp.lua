@@ -51,10 +51,39 @@ lsp_config = require'lspconfig'
 --    }
 --}
 
+-- Might be cleaner to try to expose this as a pattern from `lspconfig.util`, as
+-- really it is just stolen from part of the `clangd` config
+local function project_name_to_container_name()
+    -- Notably _not_ including `compile_commands.json`, as we want the entire project
+    local root_pattern = lsp_config.util.root_pattern('.git')
 
-lsp_config["clangd"].setup{
+    -- Turn the name of the current file into the name of an expected container, assuming that
+    -- the container running/building this file is named the same as the basename of the project
+    -- that the file is in
+    --
+    -- The name of the current buffer
+    local bufname = vim.api.nvim_buf_get_name(0)
+
+    -- Turned into a filename
+    local filename = lsp_config.util.path.is_absolute(bufname) and bufname or lsp_config.util.path.join(vim.loop.cwd(), bufname)
+
+    -- Then the directory of the project
+    local project_dirname = root_pattern(filename) or lsp_config.util.path.dirname(filename)
+
+    -- And finally perform what is essentially a `basename` on this directory
+    return vim.fn.fnamemodify(lsp_config.util.find_git_ancestor(project_dirname), ':t')
+end
+
+-- Note that via the `manager` from `server_per_root_dir_manager`, we'll get a separate instance
+-- of `clangd` as we switch between files, or even projects, inside of the right container
+--
+-- Finally, we've formed the "basename of a project" to pass to our `cclangd` script, which will
+-- then look for a matching container, or run `clangd` normally if no matching container is found
+--    /path/to/my/project
+-- would look for a container named `project`, and `docker exec` a `clangd` instance there, etc.
+lsp_config["clangd"].setup {
     on_attach = on_attach,
-    cmd = { "clangd", "--suggest-missing-includes"},
+    cmd = { "cclangd", project_name_to_container_name()},
 }
 
 lsp_config["rust_analyzer"].setup({
@@ -62,19 +91,19 @@ lsp_config["rust_analyzer"].setup({
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    -- This will disable virtual text, like doing:
-    -- let g:diagnostic_enable_virtual_text = 0
-    virtual_text = true,
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        -- This will disable virtual text, like doing:
+        -- let g:diagnostic_enable_virtual_text = 0
+        virtual_text = true,
 
-    -- This is similar to:
-    -- let g:diagnostic_show_sign = 1
-    -- To configure sign display,
-    --  see: ":help vim.lsp.diagnostic.set_signs()"
-    signs = true,
+        -- This is similar to:
+        -- let g:diagnostic_show_sign = 1
+        -- To configure sign display,
+        --  see: ":help vim.lsp.diagnostic.set_signs()"
+        signs = true,
 
-    -- This is similar to:
-    -- "let g:diagnostic_insert_delay = 1"
-    update_in_insert = true,
-  }
+        -- This is similar to:
+        -- "let g:diagnostic_insert_delay = 1"
+        update_in_insert = true,
+    }
 )
