@@ -4,7 +4,7 @@ let mapleader = " " " Giving this a whirl
 
 call plug#begin(stdpath('data') . '/plugged')
     Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
+    Plug 'hrsh7th/nvim-compe'
 
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'nvim-treesitter/playground'
@@ -87,6 +87,7 @@ autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 colo jony
 
 lua <<END
+    require'config/compe'
     require'config/lsp'
     require'config/treesitter'
 END

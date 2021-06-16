@@ -1,19 +1,11 @@
 local on_attach = function(client, bufnr)
-    -- For now, completion is only setup for buffers that have an lsp server attached
-    require'completion'.on_attach(client)
-
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
     --Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-    local opts = { noremap=false, silent=true }
-    -- I liked that IDE setting.
-    buf_set_keymap('i', '<C-space>', '<Plug>(completion_trigger)', opts)
-
-
-    opts.noremap = true
+    local opts = { noremap=true, silent=true }
 
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     --buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
