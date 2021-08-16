@@ -1,4 +1,5 @@
-icons = "awesome"
+[icons]
+name = "awesome"
 
 [[block]]
 block = "net"
