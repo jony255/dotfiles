@@ -24,3 +24,6 @@ bindsym $mod+q kill
 
 # I don't like title bars
 default_border pixel 5
+
+# move floating windows with mouse when $mod is pressed
+floating_modifier $mod normal
