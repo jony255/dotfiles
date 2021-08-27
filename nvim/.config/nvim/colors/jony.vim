@@ -156,6 +156,8 @@ hi Comment         ctermfg=167     ctermbg=none    cterm=italic
 "--------------------------------------------------------------------
 hi link TSField    Member
 hi link TSProperty Member
+hi link TSConstructor Function
+hi link TSFuncBuiltin Function
 
 hi link TSParameter          Variable
 hi link TSParameterReference Variable
