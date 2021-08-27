@@ -1,11 +1,4 @@
-input $touchpad {
-    tap enabled
-    natural_scroll enable
-    dwt enabled
-    events disabled_on_external_mouse
-}
-
-input $another_touchpad {
+input type:touchpad {
     tap enabled
     natural_scroll enable
     dwt enabled

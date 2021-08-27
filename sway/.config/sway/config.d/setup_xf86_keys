@@ -10,5 +10,5 @@ bindsym {
     XF86MonBrightnessUp   exec $brightness_script raise $brightness_delta
     XF86MonBrightnessDown exec $brightness_script lower $brightness_delta
 
-    XF86TouchpadToggle exec swaymsg input $touchpad events toggle
+    XF86TouchpadToggle exec swaymsg input type:touchpad events toggle
 }
