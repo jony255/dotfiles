@@ -1,1 +1,1 @@
-output DP-1 mode 2560x1440@120Hz
+output $external_output mode 2560x1440@120Hz

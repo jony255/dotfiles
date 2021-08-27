@@ -23,5 +23,8 @@ set {
     $up    k
     $right l
 
+    $external_output DP-1
+    $internal_output eDP-1
+
     $menu bemenu-run
 }

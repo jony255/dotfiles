@@ -7,6 +7,16 @@ bindsym {
     $mod+5 workspace 5
 }
 
+workspace {
+    1 output $internal_output
+
+    2 output $external_output
+    3 output $external_output
+    4 output $external_output
+
+    5 output $internal_output
+}
+
 bindsym {
     $mod+Shift+1 move container to workspace 1
     $mod+Shift+2 move container to workspace 2
