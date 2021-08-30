@@ -4,6 +4,7 @@ font OfficeCodePro Nerd Font 10
 
 bindsym $mod+Shift+e exec swaymsg exit
 bindsym $mod+Shift+r exec swaymsg reload
+bindsym $mod+u exec $lock
 
 exec mako
 exec $pipewire_script

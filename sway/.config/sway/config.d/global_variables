@@ -18,6 +18,8 @@ set {
 
     $pipewire_script $scripts_dir/pipewire.sh
 
+    $lock swaylock
+
     $left  h
     $down  j
     $up    k
