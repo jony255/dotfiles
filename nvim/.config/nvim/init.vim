@@ -6,7 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
 
-    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
     Plug 'nvim-treesitter/playground'
 
     "Plug 'jackguo380/vim-lsp-cxx-highlight'
