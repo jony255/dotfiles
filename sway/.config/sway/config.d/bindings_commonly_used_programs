@@ -2,4 +2,5 @@
 bindsym {
     $mod+Return exec $term
     $mod+b exec $browser
+    $mod+Shift+b exec $priv_browser
 }

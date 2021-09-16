@@ -5,6 +5,7 @@ set {
     # variables for commonly used programs
     $term alacritty
     $browser firefox
+    $priv_browser $browser --private-window
 
     $scripts_dir $XDG_CONFIG_HOME/sway/scripts
 
