@@ -15,6 +15,7 @@ block = "battery"
 [[block]]
 block = "sound"
 driver = "pulseaudio"
+on_click = "pavucontrol"
 
 [[block]]
 block = "time"
