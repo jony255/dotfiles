@@ -1,0 +1,24 @@
+global !p
+def lower_snake_case(value):
+	return '_'.join(value.lower().replace('#', ' ').replace('-', ' ').split())
+endglobal
+
+snippet header_anchor_one "Define an 'h1' with an anchor" b
+<a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
+# $1
+endsnippet
+
+snippet header_anchor_two "Define an 'h2' with an anchor" b
+<a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
+## $1
+endsnippet
+
+snippet header_anchor_three "Define an 'h3' with an anchor" b
+<a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
+### $1
+endsnippet
+
+snippet header_anchor_four "Define an 'h4' with an anchor" b
+<a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
+#### $1
+endsnippet
