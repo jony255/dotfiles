@@ -9,9 +9,9 @@ BinPackParameters: true
 BreakBeforeBinaryOperators: NonAssignment
 ColumnLimit: 80
 IndentCaseLabels: true
-IndentWrappedFunctionNames: false
 IndentGotoLabels: false
 IndentWidth: 4
+IndentWrappedFunctionNames: false
 MaxEmptyLinesToKeep: 1
 PointerBindsToType: false
 SortIncludes: true
