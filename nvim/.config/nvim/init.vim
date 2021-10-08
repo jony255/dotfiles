@@ -109,19 +109,19 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-hi LspDiagnosticsVirtualTextError ctermbg=160
-hi LspDiagnosticsSignError ctermbg=160
+hi DiagnosticVirtualTextError ctermbg=160
+hi DiagnosticSignError ctermbg=160
 
-hi LspDiagnosticsVirtualTextWarning ctermbg=160
-hi LspDiagnosticsSignWarning ctermbg=160
+hi DiagnosticVirtualTextWarning ctermbg=160
+hi DiagnosticSignWarning ctermbg=160
 
-hi LspDiagnosticsVirtualTextInformation ctermbg=160
-hi LspDiagnosticsSignInformation ctermbg=160
+hi DiagnosticVirtualTextInformation ctermbg=160
+hi DiagnosticSignInformation ctermbg=160
 
-call sign_define("LspDiagnosticsErrorSign", {"text" : "E", "texthl" : "LspDiagnosticsError"})
-call sign_define("LspDiagnosticsWarningSign", {"text" : "W", "texthl" : "LspDiagnosticsWarning"})
-call sign_define("LspDiagnosticInformationSign", {"text" : "I", "texthl" : "LspDiagnosticsInformation"})
-call sign_define("LspDiagnosticHintSign", {"text" : "H", "texthl" : "LspDiagnosticsHint"})
+call sign_define("DiagnosticErrorSign", {"text" : "E", "texthl" : "DiagnosticError"})
+call sign_define("DiagnosticWarningSign", {"text" : "W", "texthl" : "DiagnosticWarning"})
+call sign_define("DiagnosticInformationSign", {"text" : "I", "texthl" : "DiagnosticInformation"})
+call sign_define("DiagnosticHintSign", {"text" : "H", "texthl" : "DiagnosticHint"})
 
 " Setup the syntax highlighting how I want.
 " I will eventually change to tree sitter once Neovim_v5.0 is released.
