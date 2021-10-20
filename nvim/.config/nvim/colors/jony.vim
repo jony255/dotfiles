@@ -82,7 +82,7 @@ hi DiffText        ctermfg=110     ctermbg=16      cterm=none
 " --------------------------------
 " Completion menu
 " --------------------------------
-hi Pmenu           ctermfg=231     ctermbg=240     cterm=none
+hi Pmenu           ctermfg=231     ctermbg=235     cterm=none
 hi PmenuSel        ctermfg=232     ctermbg=255     cterm=none
 hi PmenuSbar       ctermfg=none    ctermbg=none    cterm=none
 hi PmenuThumb      ctermfg=none    ctermbg=none    cterm=none
