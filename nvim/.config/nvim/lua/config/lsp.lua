@@ -92,6 +92,19 @@ lsp_config["rust_analyzer"].setup({
 
 lsp_config["pylsp"].setup({
     on_attach=on_attach,
+    settings = {
+        pylsp = {
+            configuration_sources = {"flake8", "pylint"},
+            plugins = {
+                flake8 = {
+                    enabled = true,
+                },
+                pylint = {
+                    enabled = true,
+                },
+            }
+        }
+    }
 })
 
 
