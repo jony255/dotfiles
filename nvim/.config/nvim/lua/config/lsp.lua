@@ -63,7 +63,58 @@ local on_attach = function(client, bufnr)
 
 end
 
+-- Setup nvim-cmp.
+local cmp = require'cmp'
+
+cmp.setup({
+    mapping = {
+        ['<C-Space>'] = cmp.mapping.complete(),
+
+        -- cmp.SelectBehavior.Insert = inserts completion into buffer when cycling through completions
+        -- cmp.SelectBehavior.Select = insert completion into buffer ONLY when you confirm the selection
+        ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+
+        ['<C-e>'] = cmp.mapping.close(),
+        -- Confirm the selection so the server can apply additional text edits
+        ['<CR>'] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Replace,
+            -- what does select mean???
+            select = true,
+        }),
+    },
+    sources = cmp.config.sources({
+            { name = 'nvim_lsp' },
+            { name = 'ultisnips' },
+            { name = 'buffer' },
+    }),
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.menu = ({
+                nvim_lsp = '[LSP]',
+                ultisnips = '[UltiSnips]',
+                buffer = '[Buf]',
+            })[entry.source.name]
+
+            print(vim.inspect(vim_item.menu))
+
+            return vim_item
+        end,
+    },
+    snippet = {
+        expand = function(args)
+            vim.fn["UltiSnips#Anon"](args.body)
+        end,
+    },
+})
+
+
 lsp_config = require'lspconfig'
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Use ccls when switching to lsp-based highlighting, I don't think clangd can
 --lsp_config.ccls.setup{
@@ -107,15 +158,18 @@ end
 -- would look for a container named `project`, and `docker exec` a `clangd` instance there, etc.
 lsp_config["clangd"].setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     cmd = { "cclangd", project_name_to_container_name()},
 }
 
 lsp_config["rust_analyzer"].setup({
     on_attach=on_attach,
+    capabilities = capabilities,
 })
 
 lsp_config["pylsp"].setup({
     on_attach=on_attach,
+    capabilities = capabilities,
     settings = {
         pylsp = {
             configuration_sources = {"flake8", "pylint"},

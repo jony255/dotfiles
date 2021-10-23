@@ -7,6 +7,12 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'hrsh7th/nvim-compe'
     Plug 'ray-x/lsp_signature.nvim'
 
+    Plug 'hrsh7th/nvim-cmp'
+
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
     Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
     Plug 'nvim-treesitter/playground'
 
@@ -90,7 +96,6 @@ autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 colo jony
 
 lua <<END
-    require'config/compe'
     require'config/lsp'
     require'config/treesitter'
 END
