@@ -9,8 +9,9 @@ call plug#begin(stdpath('data') . '/plugged')
 
     Plug 'hrsh7th/nvim-cmp'
 
-    Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-nvim-lua'
     Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
