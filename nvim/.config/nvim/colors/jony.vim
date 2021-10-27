@@ -113,7 +113,7 @@ hi Operator        ctermfg=14      ctermbg=none    cterm=none
 hi Keyword         ctermfg=14      ctermbg=none    cterm=none
 hi Exception       ctermfg=14      ctermbg=none    cterm=none
 
-hi Special         ctermfg=107     ctermbg=none    cterm=none
+hi Special         ctermfg=128     ctermbg=none    cterm=none
 hi SpecialChar     ctermfg=96      ctermbg=none    cterm=none
 hi Tag             ctermfg=none    ctermbg=none    cterm=none
 hi Delimiter       ctermfg=66      ctermbg=none    cterm=none
