@@ -182,6 +182,9 @@ lsp_config["pylsp"].setup({
                 pylint = {
                     enabled = true,
                 },
+                jedi_completion = {
+                    cache_labels_for = {"wx"},
+                },
             }
         }
     }
