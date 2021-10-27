@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 function main
-    set LOGIN_DIR "$HOME/.logind_fish"
+    set LOGIN_DIR "$HOME/.config/fish/login.d/"
 
     if status is-login
         for logind_script in (find -L $LOGIN_DIR -name '*.fish' -o -name '*.sh' -type f | sort)
@@ -11,7 +11,6 @@ function main
         if [ (tty) = "/dev/tty1" ]
             exec dbus-launch sway
         end
-
     end
 end
 
