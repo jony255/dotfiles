@@ -74,6 +74,11 @@ nnoremap <S-Tab> <<
 " disable Ex mode
 noremap Q <Nop>
 
+" From https://bluz71.github.io/2021/09/10/vim-tips-revisited.html
+" center screen after scrolling to the next search term
+nnoremap n nzz
+nnoremap N Nzz
+
 " https://vim.fandom.com/wiki/Highlight_unwanted_spaces
 " This line is needed to make sure colorschemes don't clear all
 " user-defined highlight groups
