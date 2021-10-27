@@ -99,7 +99,7 @@ autocmd InsertEnter,InsertLeave * match TrailingWhitespace /\s\+$/
 " recently open a file.
 autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 
-colo jony
+colo jony_ng
 
 lua <<END
     require'config/lsp'
