@@ -4,7 +4,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let g:colors_name="jony"
+let g:colors_name="jony_ng"
 
 " Values of the system colors already configured in the terimnal emulator's
 " settings. Colors [0,15] are preconfigured. These values must be in sync with
