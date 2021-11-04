@@ -82,8 +82,13 @@ cmp.setup({
         -- Confirm the selection so the server can apply additional text edits
         ['<CR>'] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
-            -- what does select mean???
-            select = true,
+            -- true = hitting enter when the completion menu pops up automatically
+            --        inserts the first item in the list, even though it wasn't
+            --        explicitly selected
+            --
+            -- false = insert the completion only if has been selected in the
+            --         completion menu
+            select = false,
         }),
     },
     sources = cmp.config.sources({
