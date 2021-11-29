@@ -185,6 +185,9 @@ lsp_config["pylsp"].setup({
                 flake8 = {
                     enabled = true,
                 },
+                pydocstyle = {
+                    enabled = true,
+                },
                 pylint = {
                     enabled = true,
                 },
