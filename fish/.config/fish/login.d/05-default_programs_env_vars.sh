@@ -1,4 +1,4 @@
-export BROSWER='firefox'
+export BROWSER='firefox'
 export EDITOR='nvim'
 export PAGER='less'
 export SHELL='fish'
