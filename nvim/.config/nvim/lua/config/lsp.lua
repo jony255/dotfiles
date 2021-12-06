@@ -173,6 +173,16 @@ lsp_config["clangd"].setup {
 lsp_config["rust_analyzer"].setup({
     on_attach=on_attach,
     capabilities = capabilities,
+    settings = {
+        ["rust_analyzer"] = {
+            cargo = {
+                loadOutDirsFromCheck = true,
+            },
+            procMacro = {
+                enable = true,
+            },
+        },
+    },
 })
 
 lsp_config["pylsp"].setup({
