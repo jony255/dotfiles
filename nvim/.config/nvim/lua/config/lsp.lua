@@ -107,8 +107,6 @@ cmp.setup({
                 buffer = '[Buf]',
             })[entry.source.name]
 
-            print(vim.inspect(vim_item.menu))
-
             return vim_item
         end,
     },
