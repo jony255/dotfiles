@@ -27,3 +27,5 @@ block = "music"
 player = "spotify"
 buttons = ["play", "next"]
 on_collapsed_click = "gtk-launch com.spotify.Client"
+dynamic_width = true
+max_width = 25
