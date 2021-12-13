@@ -125,6 +125,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 -- Use ccls when switching to lsp-based highlighting, I don't think clangd can
 --lsp_config.ccls.setup{
 --    on_attach=on_attach,
+--    capabilities=capabilities,
 --    init_options = {
 --        highlight = {
 --            lsRanges = true;
