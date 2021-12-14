@@ -174,6 +174,10 @@ lsp_config["rust_analyzer"].setup({
     capabilities = capabilities,
     settings = {
         ["rust_analyzer"] = {
+            assist = {
+                importGranularity = "module",
+                importPrefix = "by_self",
+            },
             cargo = {
                 loadOutDirsFromCheck = true,
             },
