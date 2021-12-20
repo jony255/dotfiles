@@ -111,9 +111,6 @@ END
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 
-let g:completion_matching_strategy_list = ['exact', 'fuzzy', 'substring', 'all']
-let g:completion_enable_snippet = 'UltiSnips'
-
 let g:UltiSnipsSnippetDirectories = [stdpath('config').'/ulti_snips']
 let g:UltiSnipsExpandTrigger = '<NOP>'
 let g:UltiSnipsJumpForwardTrigger = '<c-j>'
