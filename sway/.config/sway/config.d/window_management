@@ -15,7 +15,7 @@ bindsym {
 }
 
 # gain access to split{v,h}, stacking, and tabbed layouts
-bindsym $mod+t exec swaymsg split toggle
+bindsym $mod+t split toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 
