@@ -29,3 +29,9 @@ default_border pixel 5
 
 # move floating windows with mouse when $mod is pressed
 floating_modifier $mod normal
+
+# configure scratchpad bindsyms
+bindsym {
+    $mod+minus       scratchpad show
+    $mod+Shift+minus move scratchpad
+}
