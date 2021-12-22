@@ -2,13 +2,17 @@ output * bg $HOME/pictures/Wallpapers/ImpressionSunset.jpg fill
 
 font OfficeCodePro Nerd Font 10
 
-bindsym $mod+Shift+e exec swaymsg exit
-bindsym $mod+Shift+r exec swaymsg reload
-bindsym $mod+u exec $lock
+bindsym {
+    $mod+Shift+e exec swaymsg exit
+    $mod+Shift+r exec swaymsg reload
+    $mod+u  exec $lock
+}
 
-exec mako
-exec $pipewire_script
+exec {
+    mako
+    $pipewire_script
 
-exec /usr/libexec/xdg-desktop-portal -r
-exec /usr/libexec/xdg-desktop-portal-wlr -r
-exec /usr/libexec/xdg-desktop-portal-gtk -r
+    /usr/libexec/xdg-desktop-portal -r
+    /usr/libexec/xdg-desktop-portal-wlr -r
+    /usr/libexec/xdg-desktop-portal-gtk -r
+}
