@@ -3,9 +3,9 @@ output * bg $HOME/pictures/Wallpapers/ImpressionSunset.jpg fill
 font OfficeCodePro Nerd Font 10
 
 bindsym {
-    $mod+Shift+e exec swaymsg exit
-    $mod+Shift+r exec swaymsg reload
-    $mod+u  exec $lock
+    $mod+Shift+e exit
+    $mod+Shift+r reload
+    $mod+u exec $lock
 }
 
 exec {
