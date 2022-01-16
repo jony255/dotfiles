@@ -15,7 +15,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'hrsh7th/cmp-path'
     Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
 
     "Plug 'jackguo380/vim-lsp-cxx-highlight'
