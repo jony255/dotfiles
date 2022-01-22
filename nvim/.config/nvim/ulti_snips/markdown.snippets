@@ -1,6 +1,13 @@
 global !p
 def lower_snake_case(value):
-	return '_'.join(value.lower().replace('#', ' ').replace('-', ' ').split())
+	return '_'.join(
+		value
+		.lower()
+		.replace('#', ' ')
+		.replace('-', ' ')
+		.replace('`', '')
+		.split()
+	)
 endglobal
 
 snippet header_anchor_one "Define an 'h1' with an anchor" b
