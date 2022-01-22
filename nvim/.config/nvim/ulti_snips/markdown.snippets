@@ -11,21 +11,25 @@ def lower_snake_case(value):
 endglobal
 
 snippet header_anchor_one "Define an 'h1' with an anchor" b
+- [$1](#$0)
 <a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
 # $1
 endsnippet
 
 snippet header_anchor_two "Define an 'h2' with an anchor" b
+- [$1](#$0)
 <a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
 ## $1
 endsnippet
 
 snippet header_anchor_three "Define an 'h3' with an anchor" b
+- [$1](#$0)
 <a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
 ### $1
 endsnippet
 
 snippet header_anchor_four "Define an 'h4' with an anchor" b
+- [$1](#$0)
 <a id="${0:`!p snip.rv = lower_snake_case(t[1])`}"></a>
 #### $1
 endsnippet
