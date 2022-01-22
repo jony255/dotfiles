@@ -55,6 +55,8 @@ set hidden " easier navigation between files without saving the one I'm on
 
 set cursorline
 
+set shortmess+=I
+
 " needed to make the c & cpp 'clang-format on save work'
 " neovim sets it by default, vim doesn't
 filetype plugin on
