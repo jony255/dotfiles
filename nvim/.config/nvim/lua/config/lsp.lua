@@ -201,7 +201,7 @@ lsp_config["rust_analyzer"].setup({
     on_attach=on_attach,
     capabilities = capabilities,
     settings = {
-        ["rust_analyzer"] = {
+        ["rust-analyzer"] = {
             assist = {
                 importGranularity = "module",
                 importPrefix = "by_self",
