@@ -109,8 +109,7 @@ autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 colo jony_ng
 
 lua <<END
-    require'config/lsp'
-    require'config/treesitter'
+    require('config').setup()
 END
 
 
