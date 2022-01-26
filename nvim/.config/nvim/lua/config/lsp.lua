@@ -96,6 +96,7 @@ cmp.setup({
             { name = 'nvim_lua' },
             { name = 'ultisnips' },
             { name = 'buffer' },
+            { name = 'dictionary', keyword_length = 2 },
             { name = 'path' },
     }),
     formatting = {
@@ -105,6 +106,7 @@ cmp.setup({
                 nvim_lua = '[NVIM-LUA]',
                 ultisnips = '[UltiSnips]',
                 buffer = '[Buf]',
+                dictionary = '[dict]',
             })[entry.source.name]
 
             return vim_item
@@ -130,6 +132,18 @@ cmp.setup.cmdline(':', {
         { name = 'path' } ,
         { name = 'cmdline' },
     }
+})
+
+require("cmp_dictionary").setup({
+    dic = {
+        ["*"] = { "/usr/share/dict/words" },
+    },
+    -- The following are default values, so you don't need to write them if you don't want to change them
+    exact = 2,
+    first_case_insensitive = false,
+    async = true,
+    capacity = 5,
+    debug = false,
 })
 
 lsp_config = require'lspconfig'

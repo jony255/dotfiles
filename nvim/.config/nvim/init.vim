@@ -11,6 +11,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-cmdline'
+    Plug 'uga-rosa/cmp-dictionary'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-nvim-lua'
     Plug 'hrsh7th/cmp-path'
