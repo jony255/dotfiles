@@ -200,6 +200,7 @@ lsp_config["clangd"].setup {
 lsp_config["rust_analyzer"].setup({
     on_attach=on_attach,
     capabilities = capabilities,
+    cmd = {"rrust-analyzer"},
     settings = {
         ["rust-analyzer"] = {
             assist = {
