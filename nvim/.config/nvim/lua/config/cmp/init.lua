@@ -42,13 +42,15 @@ local function setup_cmp()
         },
         formatting = {
             format = function(entry, vim_item)
-                vim_item.menu = ({
+                local menu_map = {
                     nvim_lsp = '[LSP]',
                     nvim_lua = '[NVIM-LUA]',
                     ultisnips = '[UltiSnips]',
                     buffer = '[Buf]',
                     dictionary = '[dict]',
-                })[entry.source.name]
+                }
+
+                vim_item.menu = menu_map[entry.source.name]
 
                 return vim_item
             end,
