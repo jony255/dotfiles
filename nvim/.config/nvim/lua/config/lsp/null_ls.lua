@@ -8,6 +8,7 @@ function M.setup(on_attach)
         on_attach = on_attach,
         sources = {
             builtins.formatting.stylua,
+            builtins.diagnostics.luacheck,
         },
     }
 end
