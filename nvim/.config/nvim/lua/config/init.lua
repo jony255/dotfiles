@@ -1,6 +1,7 @@
 local cmp_cfg = require('config.cmp')
 local lsp_cfg = require('config.lsp')
 local lsp_signature_cfg = require('config.lsp_signature')
+local null_ls_cfg = require('config.null_ls')
 local treesitter_cfg = require('config.treesitter')
 
 local M = {}
@@ -14,6 +15,8 @@ end
 function M.setup()
     cmp_cfg.setup()
     lsp_cfg.setup(on_attach, cmp_cfg.capabilities)
+
+    null_ls_cfg.setup(on_attach)
 
     treesitter_cfg.setup()
 end
