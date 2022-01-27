@@ -51,6 +51,8 @@ function M.setup(on_attach, capabilties)
         require('config.lsp.' .. server).setup(lsp_config, on_attach, capabilties)
     end
 
+    require('config.lsp.null_ls').setup(on_attach)
+
     vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
         vim.lsp.diagnostic.on_publish_diagnostics,
         {
