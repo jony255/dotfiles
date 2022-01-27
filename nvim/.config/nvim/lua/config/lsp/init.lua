@@ -3,13 +3,17 @@ local lsp_config = require('lspconfig')
 local M = {}
 
 function M.setup_keybindings(client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+    local function buf_set_keymap(...)
+        vim.api.nvim_buf_set_keymap(bufnr, ...)
+    end
+    local function buf_set_option(...)
+        vim.api.nvim_buf_set_option(bufnr, ...)
+    end
 
     --Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-    local opts = { noremap=true, silent=true }
+    local opts = { noremap = true, silent = true }
 
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     --buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -43,12 +47,13 @@ function M.setup_keybindings(client, bufnr)
 end
 
 function M.setup(on_attach, capabilties)
-    for _, server in ipairs {'clangd', 'pylsp', 'rust-analyzer'} do
+    for _, server in ipairs { 'clangd', 'pylsp', 'rust-analyzer' } do
         require('config.lsp.' .. server).setup(lsp_config, on_attach, capabilties)
     end
 
-    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-        vim.lsp.diagnostic.on_publish_diagnostics, {
+    vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+        vim.lsp.diagnostic.on_publish_diagnostics,
+        {
             -- This will disable virtual text, like doing:
             -- let g:diagnostic_enable_virtual_text = 0
             virtual_text = true,

@@ -1,29 +1,29 @@
 local M = {}
 
 function M.setup()
-    require'nvim-treesitter.configs'.setup {
+    require('nvim-treesitter.configs').setup {
         ensure_installed = {
-            "bash",
-            "c",
-            "cmake",
-            "comment",
-            "cpp",
-            "dockerfile",
-            "fish",
-            "json",
-            "kotlin",
-            "lua",
-            "nix",
-            "python",
-            "query",
-            "regex",
-            "rust",
-            "toml",
-            "yaml",
-            "zig",
+            'bash',
+            'c',
+            'cmake',
+            'comment',
+            'cpp',
+            'dockerfile',
+            'fish',
+            'json',
+            'kotlin',
+            'lua',
+            'nix',
+            'python',
+            'query',
+            'regex',
+            'rust',
+            'toml',
+            'yaml',
+            'zig',
         },
         highlight = {
-            enable = true,    -- false will disable the whole extension
+            enable = true, -- false will disable the whole extension
         },
         indent = {
             enable = true,
@@ -32,15 +32,14 @@ function M.setup()
             enable = true,
             disable = {},
             updatetime = 1, -- Debounced time for highlighting nodes in the playground from source code
-            persist_queries = false -- Whether the query persists across vim sessions
+            persist_queries = false, -- Whether the query persists across vim sessions
         },
         query_linter = {
             enable = true,
             use_virtual_text = true,
-            lint_events = {"BufWrite", "CursorHold" },
+            lint_events = { 'BufWrite', 'CursorHold' },
         },
     }
-
 
     -- https://github.com/nvim-treesitter/nvim-treesitter#folding
     -- The nvim documentation (h: vim.o) says to use vim.o when you want to

@@ -14,20 +14,22 @@ local function project_name_to_container_name(lsp_config)
     local bufname = vim.api.nvim_buf_get_name(0)
 
     -- Turned into a filename
-    local filename = lsp_config.util.path.is_absolute(bufname) and bufname or lsp_config.util.path.join(vim.loop.cwd(), bufname)
+    local filename = lsp_config.util.path.is_absolute(bufname) and bufname
+        or lsp_config.util.path.join(vim.loop.cwd(), bufname)
 
     -- Then the directory of the project
-    local project_dirname = root_pattern(filename) or lsp_config.util.path.dirname(filename)
+    local project_dirname = root_pattern(filename)
+        or lsp_config.util.path.dirname(filename)
 
     -- And finally perform what is essentially a `basename` on this directory
     return vim.fn.fnamemodify(lsp_config.util.find_git_ancestor(project_dirname), ':t')
 end
 
 function M.setup(lsp_config, on_attach, capabilities)
-    lsp_config["clangd"].setup {
-        on_attach=on_attach,
-        capabilities=capabilities,
-        cmd = { "cclangd", project_name_to_container_name(lsp_config) },
+    lsp_config['clangd'].setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+        cmd = { 'cclangd', project_name_to_container_name(lsp_config) },
     }
 end
 

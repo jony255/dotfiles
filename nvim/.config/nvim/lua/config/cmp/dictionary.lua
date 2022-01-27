@@ -1,9 +1,9 @@
 local M = {}
 
 function M.setup()
-    require("cmp_dictionary").setup {
+    require('cmp_dictionary').setup {
         dic = {
-            ["*"] = { "/usr/share/dict/words" },
+            ['*'] = { '/usr/share/dict/words' },
         },
 
         exact = 2,
