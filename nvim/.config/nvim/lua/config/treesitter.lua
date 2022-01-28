@@ -1,27 +1,10 @@
+local nvim_treesitter_cfgs = require('nvim-treesitter.configs')
+
 local M = {}
 
-function M.setup()
-    require('nvim-treesitter.configs').setup {
-        ensure_installed = {
-            'bash',
-            'c',
-            'cmake',
-            'comment',
-            'cpp',
-            'dockerfile',
-            'fish',
-            'json',
-            'kotlin',
-            'lua',
-            'nix',
-            'python',
-            'query',
-            'regex',
-            'rust',
-            'toml',
-            'yaml',
-            'zig',
-        },
+local function setup_treesitter_plugin()
+    nvim_treesitter_cfgs.setup {
+        ensure_installed = 'maintained',
         highlight = {
             enable = true, -- false will disable the whole extension
         },
@@ -40,7 +23,9 @@ function M.setup()
             lint_events = { 'BufWrite', 'CursorHold' },
         },
     }
+end
 
+local function setup_treesitter_folds()
     -- https://github.com/nvim-treesitter/nvim-treesitter#folding
     -- The nvim documentation (h: vim.o) says to use vim.o when you want to
     -- 'Get or set editor options, like :set' Which is what the link above
@@ -54,6 +39,11 @@ function M.setup()
     vim.wo.foldmethod = 'expr'
     vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
     vim.wo.foldnestmax = 2
+end
+
+function M.setup()
+    setup_treesitter_plugin()
+    setup_treesitter_folds()
 end
 
 return M
