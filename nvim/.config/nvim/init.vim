@@ -2,7 +2,7 @@ set nocompatible
 
 let mapleader = " " " Giving this a whirl
 
-call plug#begin(stdpath('data') . '/plugged')
+call plug#begin()
     Plug 'neovim/nvim-lspconfig'
     Plug 'ray-x/lsp_signature.nvim'
 
