@@ -1,1 +1,5 @@
 nvim/.config/nvim/.netrwhist
+
+# dotter
+.dotter/cache/
+.dotter/cache.toml

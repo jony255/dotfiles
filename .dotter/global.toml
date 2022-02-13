@@ -1,0 +1,13 @@
+[default.files]
+alacritty = "~/.config/alacritty"
+fish = "~/.config/fish"
+fontconfig = "~/.config/fontconfig"
+git = "~/.config/git"
+i3status-rs = "~/.config/i3status-rs"
+imv = "~/.config/imv"
+mako = "~/.config/mako"
+mpv = "~/.config/mpv"
+nvim = "~/.config/nvim"
+sway = "~/.config/sway"
+swaylock = "~/.config/swaylock"
+termite = "~/.config/termite"
