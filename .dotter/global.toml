@@ -8,6 +8,8 @@ imv = "~/.config/imv"
 mako = "~/.config/mako"
 mpv = "~/.config/mpv"
 nvim = "~/.config/nvim"
+termite = "~/.config/termite"
+
+[sway.files]
 sway = "~/.config/sway"
 swaylock = "~/.config/swaylock"
-termite = "~/.config/termite"
