@@ -1,1 +1,4 @@
 output $external_output mode 2560x1440@120Hz
+
+output $external_output position 0 0
+output $internal_output position 2560 0
