@@ -16,6 +16,8 @@ block = "battery"
 block = "sound"
 driver = "pulseaudio"
 on_click = "pavucontrol"
+max_vol = 100
+headphones_indicator = true
 
 [[block]]
 block = "time"
