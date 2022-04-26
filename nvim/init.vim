@@ -27,6 +27,8 @@ call plug#begin()
     Plug 'SirVer/ultisnips'
 
     Plug 'airblade/vim-gitgutter'
+
+    Plug 'pest-parser/pest.vim'
 call plug#end()
 
 set number
