@@ -7,7 +7,7 @@ function M.setup()
         },
 
         exact = 2,
-        first_case_insensitive = false,
+        first_case_insensitive = true,
         async = true,
         capacity = 5,
         debug = false,
