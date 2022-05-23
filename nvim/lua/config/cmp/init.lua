@@ -4,7 +4,7 @@ local M = {}
 
 local function setup_cmp()
     cmp.setup {
-        mapping = {
+        mapping = cmp.mapping.preset.insert {
             ['<C-Space>'] = cmp.mapping.complete(),
 
             -- cmp.SelectBehavior.Insert = inserts completion into buffer when cycling through completions
