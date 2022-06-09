@@ -16,9 +16,11 @@ bindsym {
 
 # gain access to split{v,h}, stacking, and tabbed layouts
 bindsym {
-    $mod+t split toggle
-    $mod+s layout stacking
-    $mod+w layout tabbed
+    $mod+t       split toggle
+    $mod+s       layout stacking
+    $mod+w       layout tabbed
+    $mod+f       floating toggle
+    $mod+Shift+f focus mode_toggle
 }
 
 # kill focused window
