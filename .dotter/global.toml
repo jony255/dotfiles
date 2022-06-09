@@ -9,6 +9,7 @@ mako = "~/.config/mako"
 mpv = "~/.config/mpv"
 nvim = "~/.config/nvim"
 termite = "~/.config/termite"
+noncompliant_xdg = "~/.config"
 
 [sway.files]
 sway = "~/.config/sway"

@@ -1,9 +1,11 @@
 # move focus via vim keybindings
 bindsym {
-    $mod+$left  focus left
-    $mod+$down  focus down
-    $mod+$up    focus up
-    $mod+$right focus right
+    $mod+$left   focus left
+    $mod+$down   focus down
+    $mod+$up     focus up
+    $mod+$right  focus right
+
+    $mod+Shift+f focus mode_toggle
 }
 
 # move containers via vim keybindings
@@ -16,11 +18,10 @@ bindsym {
 
 # gain access to split{v,h}, stacking, and tabbed layouts
 bindsym {
-    $mod+t       split toggle
-    $mod+s       layout stacking
-    $mod+w       layout tabbed
-    $mod+f       floating toggle
-    $mod+Shift+f focus mode_toggle
+    $mod+t split toggle
+    $mod+s layout stacking
+    $mod+w layout tabbed
+    $mod+f floating toggle
 }
 
 # kill focused window
