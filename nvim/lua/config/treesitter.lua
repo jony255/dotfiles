@@ -4,7 +4,7 @@ local M = {}
 
 local function setup_treesitter_plugin()
     nvim_treesitter_cfgs.setup {
-        ensure_installed = 'maintained',
+        ensure_installed = 'all',
         highlight = {
             enable = true, -- false will disable the whole extension
         },
