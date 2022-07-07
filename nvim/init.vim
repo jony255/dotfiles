@@ -22,8 +22,6 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
 
-    "Plug 'jackguo380/vim-lsp-cxx-highlight'
-
     Plug 'SirVer/ultisnips'
 
     Plug 'airblade/vim-gitgutter'
@@ -116,7 +114,6 @@ lua <<END
     require('config').setup()
 END
 
-
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 
@@ -141,12 +138,6 @@ call sign_define("DiagnosticErrorSign", {"text" : "E", "texthl" : "DiagnosticErr
 call sign_define("DiagnosticWarningSign", {"text" : "W", "texthl" : "DiagnosticWarning"})
 call sign_define("DiagnosticInformationSign", {"text" : "I", "texthl" : "DiagnosticInformation"})
 call sign_define("DiagnosticHintSign", {"text" : "H", "texthl" : "DiagnosticHint"})
-
-" Setup the syntax highlighting how I want.
-" I will eventually change to tree sitter once Neovim_v5.0 is released.
-hi! link LspCxxHlGroupMemberVariable Member
-hi! link LspCxxHlSymVariable Variable
-hi! link LspCxxHlSymParameter Variable
 
 " For git-gutter
 set updatetime=100
