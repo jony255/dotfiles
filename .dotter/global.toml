@@ -2,6 +2,7 @@
 alacritty = "~/.config/alacritty"
 fish = "~/.config/fish"
 fontconfig = "~/.config/fontconfig"
+gdb = "~/.config/gdb"
 git = "~/.config/git"
 i3status-rs = "~/.config/i3status-rs"
 imv = "~/.config/imv"
