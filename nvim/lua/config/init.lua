@@ -2,6 +2,7 @@ local cmp_cfg = require('config.cmp')
 local lsp_cfg = require('config.lsp')
 local lsp_signature_cfg = require('config.lsp_signature')
 local treesitter_cfg = require('config.treesitter')
+local gitsigns_cfg = require('config.gitsigns')
 
 local M = {}
 
@@ -16,6 +17,7 @@ function M.setup()
     lsp_cfg.setup(on_attach, cmp_cfg.capabilities)
 
     treesitter_cfg.setup()
+    gitsigns_cfg.setup()
 end
 
 return M

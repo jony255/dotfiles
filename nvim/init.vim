@@ -24,7 +24,7 @@ call plug#begin()
 
     Plug 'SirVer/ultisnips'
 
-    Plug 'airblade/vim-gitgutter'
+    Plug 'lewis6991/gitsigns.nvim'
 
     Plug 'pest-parser/pest.vim'
 call plug#end()
@@ -138,12 +138,6 @@ call sign_define("DiagnosticErrorSign", {"text" : "E", "texthl" : "DiagnosticErr
 call sign_define("DiagnosticWarningSign", {"text" : "W", "texthl" : "DiagnosticWarning"})
 call sign_define("DiagnosticInformationSign", {"text" : "I", "texthl" : "DiagnosticInformation"})
 call sign_define("DiagnosticHintSign", {"text" : "H", "texthl" : "DiagnosticHint"})
-
-" For git-gutter
-set updatetime=100
-
-nmap <Leader>hn <Plug>(GitGutterNextHunk)
-nmap <Leader>hN <Plug>(GitGutterPrevHunk)
 
 augroup FixCHeaderFiles
   autocmd!
