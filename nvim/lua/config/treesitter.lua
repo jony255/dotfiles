@@ -7,6 +7,7 @@ local function setup_treesitter_plugin()
         ensure_installed = 'all',
         highlight = {
             enable = true, -- false will disable the whole extension
+            disable = { 'gitcommit' },
         },
         indent = {
             enable = true,
