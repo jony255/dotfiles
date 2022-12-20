@@ -66,10 +66,10 @@ set shortmess+=I
 filetype plugin on
 
 " move around splits
-nnoremap <Space>h <C-W>h
-nnoremap <Space>l <C-W>l
-nnoremap <Space>j <C-W>j
-nnoremap <Space>k <C-W>k
+"nnoremap <Space>h <C-W>h
+"nnoremap <Space>l <C-W>l
+"nnoremap <Space>j <C-W>j
+"nnoremap <Space>k <C-W>k
 
 " have functionality match that of C and D
 nnoremap Y y$
