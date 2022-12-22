@@ -50,6 +50,9 @@ set expandtab     " tabs converted to spaces
 " I'm keeping it on regardless though to make moving from neovim to vim more
 " easy should I ever need to in the future.
 syntax on
+
+set spelloptions=noplainbuffer
+
 set autoindent
 set showcmd
 set hlsearch incsearch
