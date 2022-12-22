@@ -101,7 +101,7 @@ nnoremap N Nzz
 " https://vim.fandom.com/wiki/Highlight_unwanted_spaces
 " This line is needed to make sure colorschemes don't clear all
 " user-defined highlight groups
-autocmd ColorScheme * highlight TrailingWhitespace ctermbg=109 guibg=red
+autocmd ColorScheme * highlight TrailingWhitespace ctermbg=109 guibg=#87afaf
 
 " Choose one of two options for choosing if the line I'm on should be
 " highlighted for TrailingWhitespace.
