@@ -45,6 +45,10 @@ set tabstop=4     " a tab is the equivalent of 4 spaces
 set shiftwidth=4  " an indentation is 4 spaces wide
 set expandtab     " tabs converted to spaces
 
+" Treesitter disables this by default since it might clash with the
+" highlighting provided by treesitter; however, this behavior can be modified.
+" I'm keeping it on regardless though to make moving from neovim to vim more
+" easy should I ever need to in the future.
 syntax on
 set autoindent
 set showcmd
