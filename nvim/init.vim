@@ -83,6 +83,9 @@ nnoremap <S-Tab> <<
 " disable Ex mode
 noremap Q <Nop>
 
+" use ESC to turn off highlights
+nmap <silent> <Esc> <cmd>noh<CR>
+
 " From https://bluz71.github.io/2021/09/10/vim-tips-revisited.html
 " center screen after scrolling to the next search term
 nnoremap n nzz
