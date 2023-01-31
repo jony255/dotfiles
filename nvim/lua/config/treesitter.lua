@@ -9,6 +9,15 @@ local function setup_treesitter_plugin()
             enable = true, -- false will disable the whole extension
             disable = { 'gitcommit' },
         },
+        incremental_selection = {
+            enable = true,
+            keymaps = {
+                init_selection = '<CR>',
+                node_incremental = '<CR>',
+                scope_incremental = '<S-CR>',
+                node_decremental = '<BS>',
+            },
+        },
         indent = {
             enable = true,
         },
