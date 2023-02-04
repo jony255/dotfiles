@@ -1,1 +1,2 @@
 tui enable
+set print pretty on
