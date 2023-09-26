@@ -9,6 +9,7 @@ imv = "~/.config/imv"
 mako = "~/.config/mako"
 mpv = "~/.config/mpv"
 nvim = "~/.config/nvim"
+tmux = "~/.config/tmux"
 noncompliant_xdg = "~/.config"
 
 [sway.files]
