@@ -19,6 +19,17 @@ set {
 
     $pipewire_script $scripts_dir/pipewire.sh
 
+    $normal_screenshot_key_combo Print
+    $copy_screenshot_key_combo Shift+Print
+
+    # keychron keyboard :))))))
+    # This combination is so random I don't think I will accidently
+    # press this on other keyboards. We'll see!
+    $keychron_screenshot_key_combo Mod1+Shift+4
+
+    $screenshot_script $scripts_dir/screenshot.sh
+    $copy_screenshot_script $scripts_dir/screenshot.sh --copy
+
     $lock swaylock
 
     $left  h

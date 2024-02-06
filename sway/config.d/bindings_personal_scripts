@@ -1,1 +1,5 @@
 bindsym $mod+d exec $menu
+
+bindsym $normal_screenshot_key_combo exec $screenshot_script
+bindsym $copy_screenshot_key_combo exec $copy_screenshot_script
+bindsym $keychron_screenshot_key_combo exec $screenshot_script
