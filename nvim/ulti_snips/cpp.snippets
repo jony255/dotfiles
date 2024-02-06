@@ -14,11 +14,25 @@ namespace $1 {
 endsnippet
 
 snippet rule_of_5 "define the 5"
-$1(const $1 &other) noexcept = delete;
-$1($1 &&other) noexcept = delete;
+$1() = delete;
 
 ~$1() noexcept = delete;
 
-auto operator=(const $1 &other) noexcept -> $1 & = delete;
-auto operator=($1 &&other) noexcept -> $1 & = delete;
+$1(const $1 &other) = delete;
+$1& operator=(const $1 &other) = delete;
+
+$1($1 &&other) noexcept = delete;
+$1& operator=($1 &&other) noexcept = delete;
+endsnippet
+
+snippet no_copy_member_functions "explicitly delete copy special member functions"
+$1() = default;
+
+~$1() noexcept = default;
+
+$1(const $1 &other) noexcept = delete;
+$1& operator=(const $1 &other) noexcept = delete;
+
+$1($1 &&other) noexcept = default;
+$1& operator=($1 &&other) noexcept = default;
 endsnippet
