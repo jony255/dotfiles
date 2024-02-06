@@ -16,9 +16,16 @@ function M.setup(lsp_config, on_attach, capabilities)
                     },
                     pylint = {
                         enabled = true,
+                        args = { '-j8' },
                     },
                     jedi_completion = {
                         cache_labels_for = { 'wx' },
+                    },
+                    black = {
+                        enabled = true,
+                    },
+                    isort = {
+                        profile = 'black',
                     },
                 },
             },
