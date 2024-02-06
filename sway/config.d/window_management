@@ -24,6 +24,8 @@ bindsym {
     $mod+f floating toggle
 }
 
+bindsym $mod+p focus parent
+
 # kill focused window
 bindsym $mod+q kill
 
