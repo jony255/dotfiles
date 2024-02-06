@@ -98,6 +98,8 @@ nmap <silent> <Esc> <cmd>noh<CR>
 nnoremap n nzz
 nnoremap N Nzz
 
+nnoremap <leader>p <cmd>FZF<CR>
+
 " https://vim.fandom.com/wiki/Highlight_unwanted_spaces
 " This line is needed to make sure colorschemes don't clear all
 " user-defined highlight groups
