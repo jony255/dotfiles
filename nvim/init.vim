@@ -27,6 +27,8 @@ call plug#begin()
     Plug 'lewis6991/gitsigns.nvim'
 
     Plug 'pest-parser/pest.vim'
+
+    Plug 'rktjmp/lush.nvim'
 call plug#end()
 
 set number
@@ -120,7 +122,8 @@ autocmd InsertEnter,InsertLeave * match TrailingWhitespace /\s\+$/
 " recently open a file.
 autocmd VimEnter,WinEnter * match TrailingWhitespace /\s\+$/
 
-colo jony_ng
+set termguicolors
+colo excolo
 
 lua <<END
     require('config').setup()
