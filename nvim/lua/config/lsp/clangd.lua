@@ -29,7 +29,7 @@ function M.setup(lsp_config, on_attach, capabilities)
     lsp_config['clangd'].setup {
         on_attach = on_attach,
         capabilities = capabilities,
-        cmd = { 'cclangd', project_name_to_container_name(lsp_config) },
+        -- cmd = { 'cclangd', project_name_to_container_name(lsp_config) },
     }
 end
 
