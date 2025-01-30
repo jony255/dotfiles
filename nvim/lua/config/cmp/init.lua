@@ -2,6 +2,8 @@ local cmp = require('cmp')
 
 local M = {}
 
+local COMPLETION_ITEM_LIMIT = 5
+
 local function setup_cmp()
     cmp.setup {
         mapping = cmp.mapping.preset.insert {
@@ -33,12 +35,16 @@ local function setup_cmp()
             },
         },
         sources = cmp.config.sources {
-            { name = 'nvim_lsp' },
-            { name = 'nvim_lua' },
-            { name = 'ultisnips' },
-            { name = 'buffer' },
-            { name = 'dictionary', keyword_length = 2 },
-            { name = 'path' },
+            { name = 'nvim_lsp', max_item_count = COMPLETION_ITEM_LIMIT + 10 },
+            { name = 'nvim_lua', max_item_count = COMPLETION_ITEM_LIMIT },
+            { name = 'ultisnips', max_item_count = COMPLETION_ITEM_LIMIT },
+            { name = 'buffer', max_item_count = COMPLETION_ITEM_LIMIT + 5 },
+            {
+                name = 'dictionary',
+                max_item_count = COMPLETION_ITEM_LIMIT,
+                keyword_length = 2,
+            },
+            { name = 'path', max_item_count = COMPLETION_ITEM_LIMIT },
         },
         formatting = {
             format = function(entry, vim_item)
