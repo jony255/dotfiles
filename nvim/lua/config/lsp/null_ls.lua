@@ -10,6 +10,7 @@ function M.setup(on_attach)
             builtins.formatting.stylua,
             builtins.formatting.cmake_format,
 
+            --builtins.diagnostics.codespell,
             builtins.diagnostics.cmake_lint,
             builtins.diagnostics.luacheck,
             builtins.diagnostics.shellcheck,
