@@ -30,9 +30,9 @@ $1() = default;
 
 ~$1() noexcept = default;
 
-$1(const $1 &other) noexcept = delete;
-$1& operator=(const $1 &other) noexcept = delete;
+$1(const $1 &other) = delete;
+$1 &operator=(const $1 &other) = delete;
 
 $1($1 &&other) noexcept = default;
-$1& operator=($1 &&other) noexcept = default;
+$1 &operator=($1 &&other) noexcept = default;
 endsnippet
